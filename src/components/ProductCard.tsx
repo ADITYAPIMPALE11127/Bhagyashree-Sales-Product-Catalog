@@ -1,14 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 interface Product {
   id: number;
   name: string;
   category: string;
   image: string;
+  side_image?: string;
   available: boolean;
   price: string;
   quantity: string;
   MRP: string;
+  Packaging_Size?: string;
+  'Usage/Application'?: string;
+  shelf_life?: string;
+  product_brand?: string;
+  'Selling rate'?: string;
+  features?: string[];
 }
 
 interface ProductCardProps {
@@ -25,7 +33,10 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 overflow-hidden w-full max-w-[380px] mx-auto">
+    <Link 
+      to={`/product/${product.id}`}
+      className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 overflow-hidden w-full max-w-[380px] mx-auto block cursor-pointer hover:scale-105"
+    >
       {/* Product Image */}
       <div className="w-full h-48 bg-gray-50">
         <img
@@ -58,7 +69,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           </span>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

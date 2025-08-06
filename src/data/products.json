@@ -1,0 +1,69 @@
+[
+  {
+    "id": 1,
+    "name": "5L Flying Tiger Sanitol Strong Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "image": "/assets/products/flying-tiger-sanitol-1.webp",
+    "MRP": "₹1,100",
+    "quantity": "5L"
+  },
+  {
+    "id": 2,
+    "name": "200gm Tiger Naphthalene Balls",
+    "category": "Naphthalene Balls",
+    "image": "/assets/products/200gm-tiger-naphthalene-balls-1000x1000.jpg",
+    "MRP": "₹95/Pack",
+    "quantity": "200gm"
+  },
+  {
+    "id": 3,
+    "name": "50gm Tiger Naphthalene Balls",
+    "category": "Naphthalene Balls",
+    "image": "/assets/products/50gm-tiger-naphthalene-balls-500x500.jpg",
+    "MRP": "₹35/Pack",
+    "quantity": "50gm"
+  },
+  {
+    "id": 4,
+    "name": "FreshWash Liquid Detergent",
+    "category": "Detergents",
+    "image": "/assets/products/freshwash-liquid-detergent.jpg",
+    "MRP": "₹180",
+    "quantity": "2L"
+  },
+  {
+    "id": 5,
+    "name": "Multi-Surface Disinfectant",
+    "category": "Cleaners",
+    "image": "/assets/products/multi-surface-disinfectant.jpg",
+    "MRP": "₹150",
+    "quantity": "750ml"
+  },
+  {
+    "id": 6,
+    "name": "Premium Fabric Softener",
+    "category": "Detergents",
+    "image": "/assets/products/premium-fabric-softener.jpg",
+     
+    "MRP": "₹200",
+    "quantity": "1.5L"
+  },
+  {
+    "id": 7,
+    "name": "Kitchen Degreaser",
+    "category": "Cleaners",
+    "image": "/assets/products/kitchen-degreaser.jpg",
+     
+    "MRP": "₹110",
+    "quantity": "500ml"
+  },
+  {
+    "id": 8,
+    "name": "Color Guard Detergent",
+    "category": "Detergents",
+    "image": "/assets/products/color-guard-detergent.jpg",
+     
+    "MRP": "₹220",
+    "quantity": "1kg"
+  }
+]

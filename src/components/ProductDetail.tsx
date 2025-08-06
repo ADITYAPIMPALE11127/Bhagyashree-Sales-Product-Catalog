@@ -141,9 +141,14 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
                     <div className="flex items-center gap-2">
                       <span className="text-sm font-medium text-gray-600">Our Price:</span>
                       <span className="text-xl font-bold text-green-600">₹{product['Selling rate']}</span>
-                      <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
-                        Save ₹{parseInt(product.MRP) - parseInt(product['Selling rate'])}
-                      </span>
+                      {product.MRP && product['Selling rate'] && 
+                       !isNaN(parseInt(product.MRP)) && 
+                       !isNaN(parseInt(product['Selling rate'])) && 
+                       parseInt(product.MRP) > parseInt(product['Selling rate']) && (
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
+                          Save ₹{parseInt(product.MRP) - parseInt(product['Selling rate'])}
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>
@@ -195,26 +200,6 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
                 </div>
               </div>
             )}
-
-            {/* Availability Status */}
-            <div className={`p-4 rounded-xl border-2 ${
-              product.available 
-                ? 'bg-green-50 border-green-200 text-green-800' 
-                : 'bg-red-50 border-red-200 text-red-800'
-            }`}>
-              <div className="flex items-center gap-3">
-                <div className={`w-4 h-4 rounded-full ${product.available ? 'bg-green-500' : 'bg-red-500'}`}></div>
-                <span className="font-bold text-lg">
-                  {product.available ? '✅ In Stock' : '❌ Out of Stock'}
-                </span>
-              </div>
-              <p className="text-sm mt-1 ml-7">
-                {product.available 
-                  ? 'Ready for immediate delivery' 
-                  : 'Currently unavailable, please check back later'
-                }
-              </p>
-            </div>
           </div>
         </div>
       </div>

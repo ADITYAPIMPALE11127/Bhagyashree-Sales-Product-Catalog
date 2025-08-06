@@ -7,24 +7,33 @@ const Header: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           {/* Left: Logo + Title */}
-          <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <img
-              src="/assets/company/logo.jpg"
-              alt="Company Logo"
-              className="w-10 h-10 object-contain"
-            />
-            <div className="flex flex-col">
-              <div className="flex items-center gap-4">
-                <h1 className="text-2xl font-bold text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>
+          <div className="flex items-center gap-3">
+            <Link to="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+              <img
+                src="/assets/company/logo.jpg"
+                alt="Company Logo"
+                className="w-10 h-10 object-contain"
+              />
+              <div className="flex flex-col">
+                <h1
+                  className="text-2xl font-bold text-gray-900"
+                  style={{ fontFamily: "'Playfair Display', serif" }}
+                >
                   Bhagyashree Sales
                 </h1>
-                <a href="#footer" style={{ fontFamily: "'Playfair Display', serif" }} className="text-blue-600 font-medium text-l">
-                  Contact Us
-                </a>
+                <p className="text-sm text-gray-600">Product Catalog</p>
               </div>
-              <p className="text-sm text-gray-600">Product Catalog</p>
-            </div>
-          </Link>
+            </Link>
+          </div>
+
+          {/* Right: Contact Us */}
+          <a
+            href="#footer"
+            className="text-blue-600 font-medium text-lg hover:underline"
+            style={{ fontFamily: "'Playfair Display', serif" }}
+          >
+            Contact Us
+          </a>
         </div>
       </div>
     </header>

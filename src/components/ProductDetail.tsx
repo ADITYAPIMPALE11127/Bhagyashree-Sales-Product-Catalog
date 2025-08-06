@@ -89,7 +89,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
                 {product.images.map((image, index) => (
                   <button
                     key={index}
-                    onClick={() => setSelectedImageIndex(index)}
+                    onMouseEnter={() => setSelectedImageIndex(index)}
                     className={`flex-1 h-20 rounded-lg overflow-hidden border-2 transition-all ${
                       selectedImageIndex === index 
                         ? 'border-blue-500 ring-2 ring-blue-200' 
@@ -119,30 +119,22 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
               </span>
               
               {/* Pricing Section */}
-              <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
-                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-                  <div className="flex items-center gap-2">
-                    <span className="text-sm font-medium text-gray-600">MRP:</span>
-                    <span className="text-2xl font-bold text-blue-600">₹{product.MRP}</span>
-                  </div>
-                  {product['Selling rate'] && (
-                    <div className="flex items-center gap-2">
-                      <span className="text-sm font-medium text-gray-600">Our Price:</span>
-                      <span className="text-xl font-bold text-green-600">₹{product['Selling rate']}</span>
-                      {product.MRP && product['Selling rate'] && 
-                       !isNaN(parseInt(product.MRP)) && 
-                       !isNaN(parseInt(product['Selling rate'])) && 
-                       parseInt(product.MRP) > parseInt(product['Selling rate']) && (
-                        <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
-                          Save ₹{parseInt(product.MRP) - parseInt(product['Selling rate'])}
-                        </span>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
 
+<div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+  <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+    <div className="flex items-center gap-2">
+      <span className="text-sm font-medium text-gray-600">MRP:</span>
+      <span className="text-2xl font-bold text-blue-600">₹{product.MRP}</span>
+    </div>
+    {product['Selling rate'] && (
+      <div className="flex items-center gap-2">
+        <span className="text-sm font-medium text-gray-600">Selling Price:</span>
+        <span className="text-xl font-bold text-green-600">₹{product['Selling rate']}</span>
+      </div>
+    )}
+  </div>
+</div>
+<br/>
             {/* Product Specifications Table */}
             <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
               <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-b border-gray-200">
@@ -166,7 +158,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
                 ))}
               </div>
             </div>
-
+            </div>
             {/* Features */}
             {product.features && product.features.length > 0 && (
               <div className="bg-white rounded-xl border border-green-200 shadow-sm overflow-hidden">

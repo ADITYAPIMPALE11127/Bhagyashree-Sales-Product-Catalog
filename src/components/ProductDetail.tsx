@@ -6,8 +6,7 @@ interface Product {
   id: number;
   name: string;
   category: string;
-  image: string;
-  side_image?: string;
+  images: string[];
   available: boolean;
   price: string;
   quantity: string;
@@ -26,7 +25,7 @@ interface ProductDetailProps {
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
   const { id } = useParams<{ id: string }>();
-  const [selectedImage, setSelectedImage] = useState<'main' | 'side'>('main');
+  const [selectedImageIndex, setSelectedImageIndex] = useState<number>(0);
   
   const product = products.find(p => p.id === parseInt(id || '0'));
 
@@ -78,43 +77,32 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
             {/* Main Image Display */}
             <div className="w-full h-96 bg-gray-50 rounded-lg overflow-hidden">
               <img
-                src={selectedImage === 'main' ? product.image : (product.side_image || product.image)}
+                src={product.images[selectedImageIndex]}
                 alt={product.name}
                 className="w-full h-full object-contain p-4"
               />
             </div>
 
             {/* Image Selection */}
-            {product.side_image && (
+            {product.images.length > 1 && (
               <div className="flex gap-3">
-                <button
-                  onClick={() => setSelectedImage('main')}
-                  className={`flex-1 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                    selectedImage === 'main' 
-                      ? 'border-blue-500 ring-2 ring-blue-200' 
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                >
-                  <img
-                    src={product.image}
-                    alt="Main view"
-                    className="w-full h-full object-contain p-2 bg-gray-50"
-                  />
-                </button>
-                <button
-                  onClick={() => setSelectedImage('side')}
-                  className={`flex-1 h-20 rounded-lg overflow-hidden border-2 transition-all ${
-                    selectedImage === 'side' 
-                      ? 'border-blue-500 ring-2 ring-blue-200' 
-                      : 'border-gray-200 hover:border-gray-300'
-                  }`}
-                >
-                  <img
-                    src={product.side_image}
-                    alt="Side view"
-                    className="w-full h-full object-contain p-2 bg-gray-50"
-                  />
-                </button>
+                {product.images.map((image, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setSelectedImageIndex(index)}
+                    className={`flex-1 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                      selectedImageIndex === index 
+                        ? 'border-blue-500 ring-2 ring-blue-200' 
+                        : 'border-gray-200 hover:border-gray-300'
+                    }`}
+                  >
+                    <img
+                      src={image}
+                      alt={`View ${index + 1}`}
+                      className="w-full h-full object-contain p-2 bg-gray-50"
+                    />
+                  </button>
+                ))}
               </div>
             )}
           </div>

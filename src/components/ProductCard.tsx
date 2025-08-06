@@ -5,8 +5,7 @@ interface Product {
   id: number;
   name: string;
   category: string;
-  image: string;
-  side_image?: string;
+  images: string[];
   available: boolean;
   price: string;
   quantity: string;
@@ -40,7 +39,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
       {/* Product Image */}
       <div className="w-full h-48 bg-gray-50">
         <img
-          src={product.image}
+          src={product.images[0]}
           alt={product.name}
           className="w-full h-full object-contain p-4"
         />

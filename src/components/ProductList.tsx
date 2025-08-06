@@ -7,7 +7,7 @@ interface Product {
   id: number;
   name: string;
   category: string;
-  image: string;
+  images: string[];
   available: boolean;
   price: string;
   quantity: string;

@@ -51,13 +51,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
 
   const productDetails = [
     { label: 'Category', value: product.category },
-    { label: 'MRP', value: product.MRP },
     { label: 'Quantity', value: product.quantity },
     ...(product.Packaging_Size ? [{ label: 'Packaging Size', value: product.Packaging_Size }] : []),
     ...(product['Usage/Application'] ? [{ label: 'Usage/Application', value: product['Usage/Application'] }] : []),
     ...(product.shelf_life ? [{ label: 'Shelf Life', value: product.shelf_life }] : []),
     ...(product.product_brand ? [{ label: 'Brand', value: product.product_brand }] : []),
-    ...(product['Selling rate'] ? [{ label: 'Selling Rate', value: product['Selling rate'] }] : []),
   ];
 
   return (
@@ -123,7 +121,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
 
           {/* Right Side - Product Details */}
           <div className="space-y-6">
-            {/* Product Title */}
+            {/* Product Title and Pricing */}
             <div>
               <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
                 {product.name}
@@ -131,16 +129,46 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
               <span className="inline-block bg-blue-100 text-blue-800 text-sm font-medium px-3 py-1 rounded-full">
                 {product.category}
               </span>
+              
+              {/* Pricing Section */}
+              <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
+                <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+                  <div className="flex items-center gap-2">
+                    <span className="text-sm font-medium text-gray-600">MRP:</span>
+                    <span className="text-2xl font-bold text-blue-600">₹{product.MRP}</span>
+                  </div>
+                  {product['Selling rate'] && (
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-medium text-gray-600">Our Price:</span>
+                      <span className="text-xl font-bold text-green-600">₹{product['Selling rate']}</span>
+                      <span className="text-xs bg-green-100 text-green-800 px-2 py-1 rounded-full font-medium">
+                        Save ₹{parseInt(product.MRP) - parseInt(product['Selling rate'])}
+                      </span>
+                    </div>
+                  )}
+                </div>
+              </div>
             </div>
 
-            {/* Product Details Table */}
-            <div className="bg-gray-50 rounded-lg p-6">
-              <h2 className="text-lg font-semibold text-gray-900 mb-4">Product Details</h2>
-              <div className="space-y-3">
+            {/* Product Specifications Table */}
+            <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
+              <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4 border-b border-gray-200">
+                <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                  <Package className="w-5 h-5 text-blue-600" />
+                  Product Specifications
+                </h2>
+              </div>
+              <div className="p-6">
                 {productDetails.map((detail, index) => (
-                  <div key={index} className="flex justify-between items-center py-2 border-b border-gray-200 last:border-b-0">
-                    <span className="font-medium text-gray-700">{detail.label}:</span>
-                    <span className="text-gray-900 font-semibold">{detail.value}</span>
+                  <div key={index} className={`flex justify-between items-center py-4 ${
+                    index !== productDetails.length - 1 ? 'border-b border-gray-100' : ''
+                  } hover:bg-gray-50 transition-colors duration-150 rounded-lg px-3 -mx-3`}>
+                    <span className="font-semibold text-gray-700 text-sm uppercase tracking-wide">
+                      {detail.label}
+                    </span>
+                    <span className="text-gray-900 font-bold text-right max-w-[60%] break-words">
+                      {detail.value}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -148,25 +176,44 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
 
             {/* Features */}
             {product.features && product.features.length > 0 && (
-              <div className="bg-green-50 rounded-lg p-6">
-                <h2 className="text-lg font-semibold text-gray-900 mb-4">Features</h2>
-                <ul className="space-y-2">
+              <div className="bg-white rounded-xl border border-green-200 shadow-sm overflow-hidden">
+                <div className="bg-gradient-to-r from-green-50 to-emerald-50 px-6 py-4 border-b border-green-200">
+                  <h2 className="text-xl font-bold text-gray-900 flex items-center gap-2">
+                    <span className="w-5 h-5 text-green-600">✨</span>
+                    Key Features
+                  </h2>
+                </div>
+                <div className="p-6">
+                  <ul className="space-y-3">
                   {product.features.map((feature, index) => (
-                    <li key={index} className="flex items-start">
-                      <span className="w-2 h-2 bg-green-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      <span className="text-gray-700">{feature}</span>
+                      <li key={index} className="flex items-start gap-3 p-2 hover:bg-green-50 rounded-lg transition-colors duration-150">
+                        <span className="w-2 h-2 bg-green-500 rounded-full mt-2.5 flex-shrink-0"></span>
+                        <span className="text-gray-700 font-medium leading-relaxed">{feature}</span>
                     </li>
                   ))}
-                </ul>
+                  </ul>
+                </div>
               </div>
             )}
 
             {/* Availability Status */}
-            <div className="flex items-center gap-2">
-              <div className={`w-3 h-3 rounded-full ${product.available ? 'bg-green-500' : 'bg-red-500'}`}></div>
-              <span className={`font-medium ${product.available ? 'text-green-700' : 'text-red-700'}`}>
-                {product.available ? 'In Stock' : 'Out of Stock'}
-              </span>
+            <div className={`p-4 rounded-xl border-2 ${
+              product.available 
+                ? 'bg-green-50 border-green-200 text-green-800' 
+                : 'bg-red-50 border-red-200 text-red-800'
+            }`}>
+              <div className="flex items-center gap-3">
+                <div className={`w-4 h-4 rounded-full ${product.available ? 'bg-green-500' : 'bg-red-500'}`}></div>
+                <span className="font-bold text-lg">
+                  {product.available ? '✅ In Stock' : '❌ Out of Stock'}
+                </span>
+              </div>
+              <p className="text-sm mt-1 ml-7">
+                {product.available 
+                  ? 'Ready for immediate delivery' 
+                  : 'Currently unavailable, please check back later'
+                }
+              </p>
             </div>
           </div>
         </div>

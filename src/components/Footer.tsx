@@ -10,7 +10,7 @@ const Footer = () => {
             <h4 className="text-lg font-semibold mb-2">Address</h4>
             <p className="text-sm">
               Bhagyashree Sales<br />
-              ;['Akurdi, Pune, Maharashtra
+              Akurdi, Pune, Maharashtra
             </p>
           </div>
 

@@ -5,7 +5,13 @@
     "category": "Floor Cleaner",
     "image": "/assets/products/flying-tiger-sanitol-1.webp",
     "MRP": "₹1,100",
-    "quantity": "5L"
+    "quantity": "5L",
+    "Packaging_Size":"5L",
+    "Usage/Application":"Floor Cleaning",
+    "shelf_life":"24 Months",
+    "product_brand":"Flying Tiger",
+    "Selling rate":"₹1,000",
+    "features":["5L Flying Tiger Sanitol Strong Concentrated Floor Cleaner"]
   },
   {
     "id": 2,

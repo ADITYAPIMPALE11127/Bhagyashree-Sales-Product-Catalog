@@ -19,6 +19,7 @@ interface Product {
   quantity: string;
   MRP: string;
   Packaging_Size?: string;
+  pack_type?: string;
   'Usage/Application'?: string;
   shelf_life?: string;
   product_brand?: string;

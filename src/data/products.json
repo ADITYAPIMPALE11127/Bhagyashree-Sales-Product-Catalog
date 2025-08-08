@@ -24,25 +24,31 @@
     "name": "500ml Tiger Sanitol Supreme Strong Concentrated Floor Cleaner",
     "category": "Floor Cleaner",
     "images": [
-      "assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454820978-1000x1000.webp",
-      "assets/products/floor-cleaner/500ml-tiger-green-strong-concentrated-floor-cleaner-500x500.webp"
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454820978-1000x1000.webp",
+      "/assets/products/floor-cleaner/500ml-tiger-green-strong-concentrated-floor-cleaner-500x500.webp"
     ],
+    "available": true,
+    "price": "₹100",
     "MRP": "120",
     "quantity": "500ML",
     "Packaging_Size": "500ML",
     "Usage/Application": "Floor Cleaning",
     "shelf_life": "24 Months",
-    "package_type": "Bottle",
+    "product_brand": "Tiger",
     "Selling rate": "100",
     "features": [
-      "4 in 1 Action","Kills Gems", "Remove Stains","Total Cleansing","Rwc-5","Sc-2.5",
+      "4 in 1 Action",
+      "Kills Germs",
+      "Remove Stains",
+      "Total Cleansing",
+      "RWC-5",
+      "SC-2.5",
       "Grade-3",
-      "Type- Normal",
+      "Type - Normal",
       "Class - A",
-      "teasted As per ISI- 1061-1997",
+      "Tested As per ISI- 1061-1997",
       "ISO 9001:2008 Certified"
-    ],
-    "product_brand":"Tiger"
+    ]
   },
   {
     "id": 21,

@@ -7,7 +7,6 @@
       "/assets/products/floor-cleaner/flying-tiger-sanitol-1.webp",
       "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-5ltr-1697454881058-500x500.webp"
     ],
-    "available": true,
     "price": "₹1,100",
     "MRP": "1100",
     "quantity": "5L",
@@ -16,17 +15,43 @@
     "shelf_life": "24 Months",
     "product_brand": "Flying Tiger",
     "Selling rate": "1000",
-    "features": ["Strong concentrated formula", "Effective sanitization", "Pleasant fragrance", "Long-lasting protection"]
+    "features": [
+      "5L Flying Tiger Sanitol Strong Concentrated Floor Cleaner"
+    ]
   },
   {
     "id": 2,
+    "name": "500ml Tiger Sanitol Supreme Strong Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "images": [
+      "assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454820978-1000x1000.webp",
+      "assets/products/floor-cleaner/500ml-tiger-green-strong-concentrated-floor-cleaner-500x500.webp"
+    ],
+    "MRP": "120",
+    "quantity": "500ML",
+    "Packaging_Size": "500ML",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "package_type": "Bottle",
+    "Selling rate": "100",
+    "features": [
+      "4 in 1 Action","Kills Gems", "Remove Stains","Total Cleansing","Rwc-5","Sc-2.5",
+      "Grade-3",
+      "Type- Normal",
+      "Class - A",
+      "teasted As per ISI- 1061-1997",
+      "ISO 9001:2008 Certified"
+    ],
+    "product_brand":"Tiger"
+  },
+  {
+    "id": 21,
     "name": "200gm Tiger Naphthalene Balls",
     "category": "Naphthalene Balls",
     "images": [
       "/assets/products/naphthalene-balls/200gm-tiger-naphthalene-balls-1000x1000.jpg",
       "/assets/products/naphthalene-balls/200gm-tiger-naphthalene-balls-500x500-back.webp"
     ],
-    "available": true,
     "price": "₹95/Pack",
     "MRP": "95",
     "quantity": "200gm",
@@ -35,17 +60,20 @@
     "shelf_life": "60 Months",
     "product_brand": "Tiger",
     "Selling rate": "85",
-    "features": ["Long-lasting protection", "Effective moth repellent", "Pure naphthalene"]
+    "features": [
+      "Long-lasting protection",
+      "Effective moth repellent",
+      "Pure naphthalene"
+    ]
   },
   {
     "id": 3,
     "name": "50gm Tiger Naphthalene Balls",
     "category": "Naphthalene Balls",
     "images": [
-      "/assets/products/naphthalene-balls/50gm-tiger-naphthalene-main.jpg",
-      "/assets/products/naphthalene-balls/50gm-tiger-naphthalene-side.jpg"
+      "/assets/products/naphthalene-balls/50gm-tiger-naphthalene-balls-500x500.jpg",
+      "/assets/products/naphthalene-balls/50gm-tiger-naphthalene-balls-500x500.jpg"
     ],
-    "available": true,
     "price": "₹35/Pack",
     "MRP": "35",
     "quantity": "50gm",
@@ -54,104 +82,10 @@
     "shelf_life": "60 Months",
     "product_brand": "Tiger",
     "Selling rate": "30",
-    "features": ["Compact size", "Effective protection", "Easy to use"]
-  },
-  {
-    "id": 4,
-    "name": "FreshWash Liquid Detergent",
-    "category": "Detergents",
-    "images": [
-      "/assets/products/detergents/freshwash-liquid-main.jpg",
-      "/assets/products/detergents/freshwash-liquid-side.jpg",
-      "/assets/products/detergents/freshwash-liquid-back.jpg"
-    ],
-    "available": true,
-    "price": "₹180",
-    "MRP": "180",
-    "quantity": "2L",
-    "Packaging_Size": "2L",
-    "Usage/Application": "Laundry Cleaning",
-    "shelf_life": "36 Months",
-    "product_brand": "FreshWash",
-    "Selling rate": "160",
-    "features": ["Concentrated formula", "Gentle on fabrics", "Fresh fragrance"]
-  },
-  {
-    "id": 5,
-    "name": "Multi-Surface Disinfectant",
-    "category": "Cleaners",
-    "images": [
-      "/assets/products/cleaners/multi-surface-disinfectant-main.jpg",
-      "/assets/products/cleaners/multi-surface-disinfectant-side.jpg"
-    ],
-    "available": true,
-    "price": "₹150",
-    "MRP": "150",
-    "quantity": "750ml",
-    "Packaging_Size": "750ml",
-    "Usage/Application": "Surface Cleaning & Disinfection",
-    "shelf_life": "24 Months",
-    "product_brand": "CleanMax",
-    "Selling rate": "135",
-    "features": ["Kills 99.9% germs", "Multi-surface safe", "Quick action formula"]
-  },
-  {
-    "id": 6,
-    "name": "Premium Fabric Softener",
-    "category": "Detergents",
-    "images": [
-      "/assets/products/detergents/premium-fabric-softener-main.jpg",
-      "/assets/products/detergents/premium-fabric-softener-side.jpg",
-      "/assets/products/detergents/premium-fabric-softener-ingredients.jpg"
-    ],
-    "available": true,
-    "price": "₹200",
-    "MRP": "200",
-    "quantity": "1.5L",
-    "Packaging_Size": "1.5L",
-    "Usage/Application": "Fabric Softening",
-    "shelf_life": "30 Months",
-    "product_brand": "SoftTouch",
-    "Selling rate": "180",
-    "features": ["Long-lasting freshness", "Anti-static protection", "Gentle on skin"]
-  },
-  {
-    "id": 7,
-    "name": "Kitchen Degreaser",
-    "category": "Cleaners",
-    "images": [
-      "/assets/products/cleaners/kitchen-degreaser-main.jpg",
-      "/assets/products/cleaners/kitchen-degreaser-side.jpg"
-    ],
-    "available": true,
-    "price": "₹110",
-    "MRP": "110",
-    "quantity": "500ml",
-    "Packaging_Size": "500ml",
-    "Usage/Application": "Kitchen Cleaning",
-    "shelf_life": "24 Months",
-    "product_brand": "KitchenPro",
-    "Selling rate": "95",
-    "features": ["Powerful degreasing action", "Food-safe formula", "Easy rinse"]
-  },
-  {
-    "id": 8,
-    "name": "Color Guard Detergent",
-    "category": "Detergents",
-    "images": [
-      "/assets/products/detergents/color-guard-main.jpg",
-      "/assets/products/detergents/color-guard-side.jpg",
-      "/assets/products/detergents/color-guard-back.jpg"
-    ],
-    "available": true,
-    "price": "₹220",
-    "MRP": "220",
-    "quantity": "1kg",
-    "Packaging_Size": "1kg",
-    "Usage/Application": "Colored Fabric Washing",
-    "shelf_life": "36 Months",
-    "product_brand": "ColorSafe",
-    "Selling rate": "200",
-    "features": ["Color protection technology", "Prevents fading", "Deep cleaning action"]
+    "features": [
+      "Compact size",
+      "Effective protection",
+      "Easy to use"
+    ]
   }
 ]

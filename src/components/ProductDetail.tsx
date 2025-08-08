@@ -54,7 +54,6 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
     { label: 'Quantity', value: product.quantity },
     ...(product.Packaging_Size ? [{ label: 'Packaging Size', value: product.Packaging_Size }] : []),
     ...(product.pack_type ? [{ label: 'Pack Type', value: product.pack_type }] : []),
-    ...(product.pack_type ? [{label:'Pack Type',value:product.pack_type}]: []),
     ...(product['Usage/Application'] ? [{ label: 'Usage/Application', value: product['Usage/Application'] }] : []),
     ...(product.shelf_life ? [{ label: 'Shelf Life', value: product.shelf_life }] : []),
     ...(product.product_brand ? [{ label: 'Brand', value: product.product_brand }] : []),

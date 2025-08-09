@@ -9,8 +9,8 @@
     ],
     "price": "₹1,100",
     "MRP": "1100",
-    "quantity": "5L",
     "Packaging_Size": "5L",
+    "pack_type": "Can",
     "Usage/Application": "Floor Cleaning",
     "shelf_life": "24 Months",
     "product_brand": "Flying Tiger",
@@ -30,7 +30,6 @@
     "available": true,
     "price": "₹100",
     "MRP": "120",
-    "quantity": "500ML",
     "Packaging_Size": "500ML",
     "pack_type": "Bottle",
     "Usage/Application": "Floor Cleaning",
@@ -52,6 +51,145 @@
     ]
   },
   {
+    "id": 3,
+    "name": "1L Pine Tiger Green Strong Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-1ltr-1697454845305-1000x1000.webp",
+      "/assets/products/floor-cleaner/1l-tiger-green-strong-concentrated-floor-cleaner-500x500.webp"
+    ],
+    "available": true,
+    "MRP": "220",
+    "Packaging_Size": "1L",
+    "pack_type": "Bottle",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "product_brand": "Tiger",
+    "Selling rate": "220",
+    "features": [
+      "4 in 1 Action",
+      "Kills Germs",
+      "Remove Stains",
+      "Maintains Hygiene"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "5L Tiger Green Strong Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/5l-tiger-green-strong-concentrated-floor-cleaner-500x500.webp",
+      "/assets/products/floor-cleaner/5l-tiger-green-strong-concentrated-floor-cleaner-500x500 (1).webp"
+    ],
+    "available": true,
+    "MRP": "900",
+    "Packaging_Size": "5L",
+    "pack_type": "Bottle",
+    "product_brand": "Tiger",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "Selling rate": "880",
+    "features": [
+      "3 in 1 Action",
+      "Kills Germs",
+      "Remove Stains",
+      "Maintains Hygiene"
+    ],
+    "price": "₹900"
+  },
+  {
+    "id": 5,
+    "name": "1L Tiger Green Strong Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/1l-tiger-green-strong-concentrated-floor-cleaner-1000x1000.webp",
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-1ltr-1697454785446-500x500.webp"
+    ],
+    "available": true,
+    "MRP": "200",
+    "Packaging_Size": "1L",
+    "pack_type": "Bottle",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "product_brand": "Tiger",
+    "Selling rate": "190",
+    "features": [
+      "3 in 1 Action",
+      "Kills Germs",
+      "Remove Stains",
+      "Maintains Hygiene"
+    ],
+    "price": "₹200"
+  },
+  {
+   "id":6,
+   "name":"500ml Pine Tiger Green Strong Concentrated Floor Cleaner",
+   "category":"Floor Cleaner",
+   "images":["/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454746796-1000x1000.webp",
+   "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454758960-500x500.webp","/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454750209-500x500.webp"
+  ],
+  "available":true,
+  "MRP":"115",
+  "Packaging_Size":"500ml",
+  "pack_type":"Bottle",
+  "Usage/Application":"Floor Cleaning",
+  "shelf_life":"24 Months",
+  "product_brand":"Tiger",
+  "Selling rate":"110",
+  "features":["3 in 1 Action","Kills Germs","Remove Stains","Maintains Hygiene"],
+  "price":"₹110"
+  },
+  {
+    "id": 7,
+    "name":"200ml Tiger Supreme Concentrated Floor Cleaner",
+    "category":"Floor Cleaner",
+    "images":["/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454806435-500x500.jpg","/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454817511-500x500.webp","/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454810097-500x500.webp"],
+    "available": true,
+    "MRP": "51",
+    "Packaging_Size": "200ml",
+    "pack_type": "Bottle",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "product_brand": "Tiger",
+    "Selling rate": "45",
+    "features": ["4 in 1 Action","Kills Germs","Remove Stains","Maintains Hygiene"],
+    "price": "₹45"
+  },
+{
+  "id":8,
+  "name":"200ml Tiger Green Strong Concentrated Floor Cleaner",
+  "category":"Floor Cleaner",
+  "images":["/assets/products/floor-cleaner/200ml-tiger-green-strong-concentrated-floor-cleaner-1000x1000.webp",
+  "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-200ml-1697454741569-500x500.webp","/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-200ml-1697454732595-500x500.webp"],
+  "available":true,
+  "MRP":"48",
+  "Packaging_Size":"200ml",
+  "pack_type":"Bottle",
+  "Usage/Application":"Floor Cleaning",
+  "shelf_life":"24 Months",
+  "product_brand":"Tiger",
+  "Selling rate":"40",
+  "features":["3 in 1 Action","Kills Germs","Remove Stains","Maintains Hygiene"],
+  "price":"₹40"
+},
+{
+"id":9,
+"name":"5L Tiger Metro Fresh",
+"category":"Floor Cleaner",
+"images":["/assets/products/floor-cleaner/5l-tiger-metro-fresh-1000x1000.webp","/assets/products/floor-cleaner/5l-tiger-metro-fresh-500x500.webp",
+           "/assets/products/floor-cleaner/5l-tiger-metro-fresh-500x500 (1).webp"],
+           "available":true,
+           "MRP":"330",
+           "Packaging_Size":"5L",
+           "pack_type":"Bottle",
+           "Usage/Application":"Floor Cleaning",
+           "shelf_life":"24 Months",
+           "product_brand":"Tiger",
+           "Selling rate":"320",
+           "features":["Color In Stock-- Pink, Blue, Green"],
+           "price":"₹330"
+},
+  {
     "id": 21,
     "name": "200gm Tiger Naphthalene Balls",
     "category": "Naphthalene Balls",
@@ -61,7 +199,6 @@
     ],
     "price": "₹95/Pack",
     "MRP": "95",
-    "quantity": "200gm",
     "Packaging_Size": "200gm",
     "Usage/Application": "Moth Protection",
     "shelf_life": "60 Months",
@@ -74,7 +211,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 22,
     "name": "50gm Tiger Naphthalene Balls",
     "category": "Naphthalene Balls",
     "images": [
@@ -83,7 +220,6 @@
     ],
     "price": "₹35/Pack",
     "MRP": "35",
-    "quantity": "50gm",
     "Packaging_Size": "50gm",
     "Usage/Application": "Moth Protection",
     "shelf_life": "60 Months",

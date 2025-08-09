@@ -32,7 +32,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
   };
 
   return (
-    <Link 
+    <Link
       to={`/product/${product.id}`}
       className="bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-200 border border-gray-200 overflow-hidden w-full max-w-[380px] mx-auto block cursor-pointer hover:scale-105"
     >
@@ -64,7 +64,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
             MRP: ₹{product.MRP}
           </span>
           <span className="text-sm text-gray-600 bg-green-100 px-2 py-1 rounded">
-            {product.quantity}
+            {product.Packaging_Size}
           </span>
         </div>
       </div>

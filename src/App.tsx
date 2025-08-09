@@ -33,12 +33,12 @@ function App() {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       <Routes>
         <Route path="/" element={<HomePage products={products} />} />
         <Route path="/product/:id" element={<ProductDetail products={products} />} />
       </Routes>
-      
+
       <div id="footer">
         <Footer />
       </div>

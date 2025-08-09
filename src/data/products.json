@@ -122,28 +122,39 @@
     "price": "₹200"
   },
   {
-   "id":6,
-   "name":"500ml Pine Tiger Green Strong Concentrated Floor Cleaner",
-   "category":"Floor Cleaner",
-   "images":["/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454746796-1000x1000.webp",
-   "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454758960-500x500.webp","/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454750209-500x500.webp"
-  ],
-  "available":true,
-  "MRP":"115",
-  "Packaging_Size":"500ml",
-  "pack_type":"Bottle",
-  "Usage/Application":"Floor Cleaning",
-  "shelf_life":"24 Months",
-  "product_brand":"Tiger",
-  "Selling rate":"110",
-  "features":["3 in 1 Action","Kills Germs","Remove Stains","Maintains Hygiene"],
-  "price":"₹110"
+    "id": 6,
+    "name": "500ml Pine Tiger Green Strong Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454746796-1000x1000.webp",
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454758960-500x500.webp",
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454750209-500x500.webp"
+    ],
+    "available": true,
+    "MRP": "115",
+    "Packaging_Size": "500ml",
+    "pack_type": "Bottle",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "product_brand": "Tiger",
+    "Selling rate": "110",
+    "features": [
+      "3 in 1 Action",
+      "Kills Germs",
+      "Remove Stains",
+      "Maintains Hygiene"
+    ],
+    "price": "₹110"
   },
   {
     "id": 7,
-    "name":"200ml Tiger Supreme Concentrated Floor Cleaner",
-    "category":"Floor Cleaner",
-    "images":["/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454806435-500x500.jpg","/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454817511-500x500.webp","/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454810097-500x500.webp"],
+    "name": "200ml Tiger Supreme Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454806435-500x500.jpg",
+      "/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454817511-500x500.webp",
+      "/assets/products/floor-cleaner/tiger-sanithol-supreme-200ml-1697454810097-500x500.webp"
+    ],
     "available": true,
     "MRP": "51",
     "Packaging_Size": "200ml",
@@ -152,43 +163,61 @@
     "shelf_life": "24 Months",
     "product_brand": "Tiger",
     "Selling rate": "45",
-    "features": ["4 in 1 Action","Kills Germs","Remove Stains","Maintains Hygiene"],
+    "features": [
+      "4 in 1 Action",
+      "Kills Germs",
+      "Remove Stains",
+      "Maintains Hygiene"
+    ],
     "price": "₹45"
   },
-{
-  "id":8,
-  "name":"200ml Tiger Green Strong Concentrated Floor Cleaner",
-  "category":"Floor Cleaner",
-  "images":["/assets/products/floor-cleaner/200ml-tiger-green-strong-concentrated-floor-cleaner-1000x1000.webp",
-  "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-200ml-1697454741569-500x500.webp","/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-200ml-1697454732595-500x500.webp"],
-  "available":true,
-  "MRP":"48",
-  "Packaging_Size":"200ml",
-  "pack_type":"Bottle",
-  "Usage/Application":"Floor Cleaning",
-  "shelf_life":"24 Months",
-  "product_brand":"Tiger",
-  "Selling rate":"40",
-  "features":["3 in 1 Action","Kills Germs","Remove Stains","Maintains Hygiene"],
-  "price":"₹40"
-},
-{
-"id":9,
-"name":"5L Tiger Metro Fresh",
-"category":"Floor Cleaner",
-"images":["/assets/products/floor-cleaner/5l-tiger-metro-fresh-1000x1000.webp","/assets/products/floor-cleaner/5l-tiger-metro-fresh-500x500.webp",
-           "/assets/products/floor-cleaner/5l-tiger-metro-fresh-500x500 (1).webp"],
-           "available":true,
-           "MRP":"330",
-           "Packaging_Size":"5L",
-           "pack_type":"Bottle",
-           "Usage/Application":"Floor Cleaning",
-           "shelf_life":"24 Months",
-           "product_brand":"Tiger",
-           "Selling rate":"320",
-           "features":["Color In Stock-- Pink, Blue, Green"],
-           "price":"₹330"
-},
+  {
+    "id": 8,
+    "name": "200ml Tiger Green Strong Concentrated Floor Cleaner",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/200ml-tiger-green-strong-concentrated-floor-cleaner-1000x1000.webp",
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-200ml-1697454741569-500x500.webp",
+      "/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-200ml-1697454732595-500x500.webp"
+    ],
+    "available": true,
+    "MRP": "48",
+    "Packaging_Size": "200ml",
+    "pack_type": "Bottle",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "product_brand": "Tiger",
+    "Selling rate": "40",
+    "features": [
+      "3 in 1 Action",
+      "Kills Germs",
+      "Remove Stains",
+      "Maintains Hygiene"
+    ],
+    "price": "₹40"
+  },
+  {
+    "id": 9,
+    "name": "5L Tiger Metro Fresh",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/5l-tiger-metro-fresh-1000x1000.webp",
+      "/assets/products/floor-cleaner/5l-tiger-metro-fresh-500x500.webp",
+      "/assets/products/floor-cleaner/5l-tiger-metro-fresh-500x500 (1).webp"
+    ],
+    "available": true,
+    "MRP": "330",
+    "Packaging_Size": "5L",
+    "pack_type": "Bottle",
+    "Usage/Application": "Floor Cleaning",
+    "shelf_life": "24 Months",
+    "product_brand": "Tiger",
+    "Selling rate": "320",
+    "features": [
+      "Color In Stock-- Pink, Blue, Green"
+    ],
+    "price": "₹330"
+  },
   {
     "id": 21,
     "name": "200gm Tiger Naphthalene Balls",

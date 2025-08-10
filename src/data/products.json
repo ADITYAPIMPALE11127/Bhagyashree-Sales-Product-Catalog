@@ -219,6 +219,109 @@
     "price": "₹330"
   },
   {
+    "id": 10,
+    "name": "1L Tiger Black Disinfectant Phenyl",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/1l-tiger-black-disinfectant-phenyl-500x500.webp",
+      "/assets/products/floor-cleaner/1l-tiger-black-disinfectant-phenyl-500x500 (1).webp"
+    ],
+    "available": true,
+    "MRP": "170",
+    "shelf_life": "12 Months",
+    "Selling rate": "165",
+    "Packaging_Size": "1L",
+    "pack_type": "Can",
+    "features": [
+      "4 in 1 Action",
+      "Kills Germs,Removes Stains, Total Cleansing",
+      "RWC-5",
+      "SC-2.5",
+      "Grade-3",
+      "Type - Normal",
+      "Class - A",
+      "Tested As per ISI- 1061-1997",
+      "ISO 9001:2008 Certified"
+    ],
+    "price": "₹170",
+    "product_brand": "Tiger"
+  },
+  {
+    "id": 11,
+    "name": "5L Tiger Black Disinfectant Phenyl",
+    "category": "Floor Cleaner",
+    "images": [
+      "/assets/products/floor-cleaner/tiger-black-disinfectant-phenyl-5ltr-1697454651807-500x500.webp",
+      "/assets/products/floor-cleaner/tiger-black-disinfectant-phenyl-5ltr-1697454663501-125x125.webp"
+    ],
+    "available": true,
+    "MRP": "800",
+    "shelf_life": "12 Months",
+    "Selling rate": "790",
+    "Packaging_Size": "5L",
+    "pack_type": "Can",
+    "features": [
+      "4 in 1 Action",
+      "Kills Germs,Removes Stains, Total Cleansing",
+      "RWC-5",
+      "SC-2.5",
+      "Grade-3",
+      "Type - Normal",
+      "Class - A",
+      "Tested As per ISI- 1061-1997",
+      "ISO 9001:2008 Certified"
+    ],
+    "price": "₹800",
+    "product_brand": "Tiger"
+  },
+  {
+    "id": 12,
+    "name": "200ml Tiger Black Disinfectant Phenyl",
+    "category": "Floor Cleaner",
+    "available": true,
+    "images": [
+      "/assets/products/floor-cleaner/tiger-black-disinfectant-phenyl-200ml-1697454695011-1000x1000.webp",
+      "/assets/products/floor-cleaner/200ml-tiger-black-disinfectant-phenyl-125x125.webp"
+    ],
+    "MRP": "45",
+    "shelf_life": "24 Months",
+    "Selling rate": "40",
+    "Packaging_Size": "200ml",
+    "pack_type": "Bottle",
+    "features": [
+      "4 in 1 Action",
+      "Kills Germs,Removes Stains, Total Cleansing",
+      "RWC-5",
+      "SC-2.5",
+      "Grade-3",
+      "Type - Normal",
+      "Class - A",
+      "Tested As per ISI- 1061-1997",
+      "ISO 9001:2008 Certified"
+    ],
+    "price": "₹40",
+    "product_brand": "Tiger"
+  },
+  {
+    "id": 13,
+    "name": "450ml Tiger Black Disinfectant Phenyl",
+    "category": "Floor Cleaner",
+    "available": true,
+    "images": [
+      "/assets/products/floor-cleaner/tiger-black-disinfectant-phenyl-450ml-1697454711513-1000x1000.webp",
+      "/assets/products/floor-cleaner/tiger-black-disinfectant-phenyl-450ml-1697454718953-500x500.webp"
+    ],
+    "MRP": 85,
+    "shelf_life": "12 Months",
+    "features": [
+      "4 in 1 Action",
+      "Kills Germs, Remove Stains, Total Cleansing"
+    ],
+    "price": "₹85",
+    "product_brand": "Tiger",
+    "Selling rate": "80"
+  },
+  {
     "id": 21,
     "name": "200gm Tiger Naphthalene Balls",
     "category": "Naphthalene Balls",

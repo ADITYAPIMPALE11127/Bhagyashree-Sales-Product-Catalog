@@ -22,11 +22,11 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
   const getCategoryImage = (category: string) => {
     switch (category.toLowerCase()) {
       case 'floor cleaner':
-        return '/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454820978-1000x1000.webp';
+        return '/assets/category/floor-cleaner.png';
       case 'naphthalene balls':
-        return '/assets/products/naphthalene-balls/200gm-tiger-naphthalene-balls-1000x1000.jpg';
+        return '/assets/category/napthaline-balls.png';
       default:
-        return '/assets/products/floor-cleaner/tiger-green-strong-concentrated-floor-cleaner-500ml-1697454820978-1000x1000.webp';
+        return '/assets/category/floor-cleaner.png';
     }
   };
 

@@ -183,7 +183,6 @@ function HomePage({ products }: { products: Product[] }) {
           )}
         </div>
       )}
-      </div>
     </div>
   );
 }

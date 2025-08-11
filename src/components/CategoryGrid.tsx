@@ -41,11 +41,11 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
             className="group flex flex-col items-center transition-all duration-200 hover:scale-105"
           >
             {/* Category Image - Larger Size */}
-            <div className="w-24 h-24 mb-3 overflow-hidden flex items-center justify-center">
+            <div className="w-24 h-24 mb-3 overflow-hidden flex items-center justify-center bg-gray-50 rounded-lg">
               <img
                 src={getCategoryImage(category)}
                 alt={category}
-                className="w-full h-full object-contain hover:opacity-80 transition-opacity"
+                className="w-full h-full object-cover hover:opacity-80 transition-opacity"
                 onError={(e) => {
                   // Fallback to icon if image fails to load
                   const target = e.target as HTMLImageElement;

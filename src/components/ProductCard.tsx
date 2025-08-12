@@ -1,22 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Product } from '../types/Product';
 
-interface Product {
-  id: number;
-  name: string;
-  category: string;
-  images: string[];
-  available: boolean;
-  price: string;
-  quantity: string;
-  MRP: string;
-  Packaging_Size?: string;
-  'Usage/Application'?: string;
-  shelf_life?: string;
-  product_brand?: string;
-  'Selling rate'?: string;
-  features?: string[];
-}
 
 interface ProductCardProps {
   product: Product;
@@ -63,9 +48,11 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
           <span className="font-bold text-blue-600 text-sm">
             MRP: ₹{product.MRP}
           </span>
-          <span className="text-sm text-gray-600 bg-green-100 px-2 py-1 rounded">
-            {product.Packaging_Size}
-          </span>
+    {product.category !== 'Floor Wiper' && product.Packaging_Size && (
+    <span className="text-sm text-gray-600 bg-green-100 px-2 py-1 rounded">
+      {product.Packaging_Size}
+    </span>
+  )}
         </div>
       </div>
     </Link>

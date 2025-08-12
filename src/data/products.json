@@ -312,6 +312,7 @@
       "/assets/products/floor-cleaner/tiger-black-disinfectant-phenyl-450ml-1697454718953-500x500.webp"
     ],
     "MRP": 85,
+    "Packaging_Size":"450ML",
     "shelf_life": "12 Months",
     "features": [
       "4 in 1 Action",
@@ -322,7 +323,7 @@
     "Selling rate": "80"
   },
   {
-    "id": 21,
+    "id": 31,
     "name": "200gm Tiger Naphthalene Balls",
     "category": "Naphthalene Balls",
     "images": [
@@ -332,35 +333,131 @@
     "price": "₹95/Pack",
     "MRP": "95",
     "Packaging_Size": "200gm",
-    "Usage/Application": "Moth Protection",
-    "shelf_life": "60 Months",
+    "Usage/Application": "Cupboard",
     "product_brand": "Tiger",
     "Selling rate": "85",
+    "shape":"Round",
+    "pack_type":"Packet",
+    "color":"White",
+    "available":true,
+
     "features": [
-      "Long-lasting protection",
-      "Effective moth repellent",
-      "Pure naphthalene"
+      "Guards against insects and moths",
+       "Tolites, Sink, Book Shelfs"
     ]
   },
   {
-    "id": 22,
+    "id": 32,
     "name": "50gm Tiger Naphthalene Balls",
     "category": "Naphthalene Balls",
     "images": [
       "/assets/products/naphthalene-balls/50gm-tiger-naphthalene-balls-500x500.jpg",
-      "/assets/products/naphthalene-balls/50gm-tiger-naphthalene-balls-500x500.jpg"
+      "/assets/products/naphthalene-balls/50gm-tiger-naphthalene-balls-125x125.webp"
     ],
     "price": "₹35/Pack",
     "MRP": "35",
+    "pack_type":"Packet",
+    "color":"White",
+    "available":true,
+    "shape":"Round",
     "Packaging_Size": "50gm",
-    "Usage/Application": "Moth Protection",
-    "shelf_life": "60 Months",
+    "Usage/Application": "Toilet",
     "product_brand": "Tiger",
     "Selling rate": "30",
     "features": [
-      "Compact size",
-      "Effective protection",
-      "Easy to use"
+      "Guards against insects and moths",
+     "Tolites, Sink, Book Shelfs"
     ]
+  },{
+    "id": 33,
+    "name":"100Gm Tiger Brand Naphthalene Balls",
+    "category": "Naphthalene Balls",
+    "images": ["/assets/products/naphthalene-balls/100gm-tiger-brand-naphthalene-balls-500x500.jpg",
+    "/assets/products/naphthalene-balls/100gm-tiger-brand-naphthalene-balls-500x500 (1).webp"],
+    "price": "₹65/Pack",
+    "MRP": "65",
+    "Packaging_Size": "100gm",
+    "Usage/Application": "Toilet",
+    "product_brand": "Tiger",
+    "Selling rate": "55",
+    "shape":"Round",
+    "brand":"Tiger",
+    "pack_type":"Packet",
+    "color":"White",
+    "available":true,
+    "shelf_life":"24 Months",
+    "features": ["Guards against insects and moths","Tolites, Sink, Book Shelfs"]
+
+  },
+  {
+"id":34,
+"name":"500gm Tiger Brand Naphthalene Balls",
+"category":"Naphthalene Balls",
+"images":["/assets/products/naphthalene-balls/500gm-tiger-brand-naphthalene-balls-125x125.webp"],
+"available":true,
+ "price":"220",
+ "MRP":220,
+ "Packaging_Size":"500gm",
+ "Usage/Application":"Cupboard",
+ "product_brand":"Tiger",
+ "Selling rate":180,
+ "features":["Guards against insects and moths","Tolites, Sink, Book Shelfs"],
+ "pack_type":"Packet",
+ "color":"White",
+ "shelf_life":"24 Months",
+ "shape":"Round",
+  "brand":"Tiger"
+
+  },
+  {
+   "id":51,
+   "name":"Marigold Plastic Floor Wiper",
+   "category":"Floor Wiper",
+   "images":["/assets/products/floor-wiper/marigold-plastic-floor-wiper-125x125.webp",
+   "/assets/products/floor-wiper/wiper-1697791532366-500x500.webp",
+   "/assets/products/floor-wiper/wiper-1697791539976-125x125.webp"],
+   "price": "₹122",
+   "MRP": 122,
+   "rod_material":"Plastic",
+   "available":true,
+   "features":["Marigold Plastic Floor Wiper"],
+   "rod_length":"3 Feet",
+   "blade_length":"12 inch",
+   "color":"Blue",
+   "Selling rate":"100",
+   "product_brand":"Marigold"
+  },
+  {
+    "id": 52,
+    "name":"Tower Plastic Floor Wiper",
+    "category":"Floor Wiper",
+    "images":["/assets/products/floor-wiper/tower-plastic-floor-wiper-1000x1000.webp",
+    "/assets/products/floor-wiper/tower-plastic-floor-wiper-125x125.webp","/assets/products/floor-wiper/floor-wiper-1697791570107-125x125.webp"],
+    "available":true,
+    "price":"₹81",
+    "MRP":"81",
+    "blade_length":"10 inch",
+    "rod_length":"15 inch",
+    "color":"Black",
+    "rod_material":"Plastic",
+    "features":["Tower Plastic Floor Wiper"],
+    "Selling rate":"60",
+    "product_brand":"Tower"
+  },
+  {
+    "id": 53,
+    "name":"Volva Floor Wiper",
+    "category":"Floor Wiper",
+    "images":["/assets/products/floor-wiper/floor-wiper-1697791547981-1000x1000.webp"],
+    "available":true,
+    "price":"₹111",
+    "MRP":"111",
+    "rod_length":"10 inch",
+    "color":"Red",
+    "rod_material":"Plastic",
+    "features":["Volva Floor Wiper"],
+    "Selling rate":"80",
+    "product_brand":"Volva",
+    "blade_length":"9 inch"
   }
 ]

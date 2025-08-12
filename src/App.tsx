@@ -7,28 +7,14 @@ import Footer from './components/Footer';
 import ProductList from './components/ProductList';
 import ProductDetail from './components/ProductDetail';
 import Header from './components/Header';
-
-
-interface Product {
-  id: number;
-  name: string;
-  category: string;
-  images: string[];
-  available: boolean;
-  price: string;
-  quantity: string;
-  MRP: string;
-  Packaging_Size?: string;
-  pack_type?: string;
-  'Usage/Application'?: string;
-  shelf_life?: string;
-  product_brand?: string;
-  'Selling rate'?: string;
-  features?: string[];
-}
+import { Product } from '../src/types/Product';
 
 function App() {
-  const products: Product[] = productsData;
+  const products: Product[] = productsData.map(p => ({
+  ...p,
+  available: p.available ?? false,
+  price: p.price ?? 'N/A',
+}));
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -54,13 +40,15 @@ function HomePage({ products }: { products: Product[] }) {
     return Array.from(new Set(products.map(product => product.category)));
   }, [products]);
 
-  const filteredProducts = useMemo(() => {
-    return products.filter(product => {
-      const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === null || product.category === selectedCategory;
-      return matchesSearch && matchesCategory;
-    });
-  }, [products, searchTerm, selectedCategory]);
+const filteredProducts = useMemo(() => {
+  return products.filter(product => {
+    const name = product.name || '';  // fallback to empty string if undefined
+    const matchesSearch = name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesCategory = selectedCategory === null || product.category === selectedCategory;
+    return matchesSearch && matchesCategory;
+  });
+}, [products, searchTerm, selectedCategory]);
+
 
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);

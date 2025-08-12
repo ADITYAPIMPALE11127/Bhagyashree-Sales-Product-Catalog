@@ -12,12 +12,17 @@ interface Product {
   quantity: string;
   MRP: string;
   Packaging_Size?: string;
-  pack_type?: string,
+  pack_type?: string;
+  shape?: string;       
+  color?: string;       
   'Usage/Application'?: string;
   shelf_life?: string;
   product_brand?: string;
   'Selling rate'?: string;
   features?: string[];
+  rod_material?: string;   
+  rod_length?: string;     
+  blade_length?: string; 
 }
 
 interface ProductDetailProps {
@@ -49,14 +54,19 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
     );
   }
 
-  const productDetails = [
-    { label: 'Category', value: product.category },
-    ...(product.Packaging_Size ? [{ label: 'Packaging Size', value: product.Packaging_Size }] : []),
-    ...(product.pack_type ? [{ label: 'Pack Type', value: product.pack_type }] : []),
-    ...(product['Usage/Application'] ? [{ label: 'Usage/Application', value: product['Usage/Application'] }] : []),
-    ...(product.shelf_life ? [{ label: 'Shelf Life', value: product.shelf_life }] : []),
-    ...(product.product_brand ? [{ label: 'Brand', value: product.product_brand }] : []),
-  ];
+const productDetails = [
+  { label: 'Category', value: product.category },
+  ...(product.Packaging_Size ? [{ label: 'Packaging Size', value: product.Packaging_Size }] : []),
+  ...(product.pack_type ? [{ label: 'Pack Type', value: product.pack_type }] : []),
+  ...(product.shape ? [{ label: 'Shape', value: product.shape }] : []),     
+  ...(product.color ? [{ label: 'Color', value: product.color }] : []),     
+  ...(product.rod_material ? [{ label: 'Rod Material', value: product.rod_material }] : []), 
+  ...(product.rod_length ? [{ label: 'Rod Length', value: product.rod_length }] : []),       
+  ...(product.blade_length ? [{ label: 'Blade Length', value: product.blade_length }] : []), 
+  ...(product['Usage/Application'] ? [{ label: 'Usage/Application', value: product['Usage/Application'] }] : []),
+  ...(product.shelf_life ? [{ label: 'Shelf Life', value: product.shelf_life }] : []),
+  ...(product.product_brand ? [{ label: 'Brand', value: product.product_brand }] : []),
+];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">

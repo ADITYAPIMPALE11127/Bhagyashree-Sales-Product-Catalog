@@ -17,9 +17,9 @@ function App() {
 }));
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-[#10707A]">
       <Header />
-
+<div className="bg-[#E8F9FF] min-h-screen">
       <Routes>
         <Route path="/" element={<HomePage products={products} />} />
         <Route path="/product/:id" element={<ProductDetail products={products} />} />
@@ -28,6 +28,7 @@ function App() {
       <div id="footer">
         <Footer />
       </div>
+    </div>
     </div>
   );
 }

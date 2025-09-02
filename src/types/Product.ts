@@ -9,9 +9,17 @@ export interface Product {
   MRP: string;
   Packaging_Size?: string;
   pack_type?: string;
+  Packaging_Type?: string;
   'Usage/Application'?: string;
   shelf_life?: string;
   product_brand?: string;
   'Selling rate'?: string;
   features?: string[];
+  rod_material?: string;
+  rod_length?: string;
+  blade_length?: string;
+  shape?: string;
+  color?: string;
+  brand?: string;
+  Fragrance?: string;
 }

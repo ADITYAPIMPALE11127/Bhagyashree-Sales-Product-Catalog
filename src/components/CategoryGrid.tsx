@@ -1,5 +1,5 @@
 import React from 'react';
-import { Package, Droplets, Sparkles } from 'lucide-react';
+import { Package, Droplets, Sparkles, Utensils } from 'lucide-react';
 
 interface CategoryGridProps {
   categories: string[];
@@ -18,6 +18,8 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
         return <Droplets className="w-12 h-12 text-blue-600" />;
       case 'cotton mop':
         return <Sparkles className="w-12 h-12 text-purple-600" />;
+      case 'dish cleaner':
+        return <Utensils className="w-12 h-12 text-green-600" />;
       default:
         return <Package className="w-12 h-12 text-gray-600" />;
     }
@@ -33,6 +35,8 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
         return '/assets/category/floor-wiper.png';
       case 'cotton mop':
         return '/assets/category/cotton-mop.png';
+      case 'dish cleaner':
+        return '/assets/category/dish-wash-cleaner.png';
       default:
         return '/assets/category/floor-cleaner.png';
     }

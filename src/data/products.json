@@ -459,5 +459,23 @@
     "Selling rate":"80",
     "product_brand":"Volva",
     "blade_length":"9 inch"
+  },
+  {
+    "id":61,
+    "name":"500ml Tiger Habit Dish Cleaner",
+    "available":true,
+    "brand":"Tiger",
+    "Fragrance":"Lemon",
+    "category":"Dish Cleaner",
+    "color":"Yellow",
+    "shelf_life":"24 Months",
+    "Usage/Application":"Dish Cleaning",
+    "price":"110",
+    "MRP":"110",
+    "Selling rate":"100",
+    "Packaging_Type":"Bottle",
+    "features":["3 action Lemon Cleaner","No Food Residue","Tough on Oil Stair, Soft on Hand"],
+    "images":["/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455004633-500x500.webp",
+  "/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455012188-500x500.webp"]
   }
 ]

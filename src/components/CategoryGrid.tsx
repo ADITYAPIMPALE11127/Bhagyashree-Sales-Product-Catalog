@@ -16,6 +16,8 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
         return <Sparkles className="w-12 h-12 text-purple-600" />;
       case 'floor wiper':
         return <Droplets className="w-12 h-12 text-blue-600" />;
+      case 'cotton mop':
+        return <Sparkles className="w-12 h-12 text-purple-600" />;
       default:
         return <Package className="w-12 h-12 text-gray-600" />;
     }
@@ -29,6 +31,8 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
         return '/assets/category/napthaline-balls.png';
       case 'floor wiper':
         return '/assets/category/floor-wiper.png';
+      case 'cotton mop':
+        return '/assets/category/cotton-mop.png';
       default:
         return '/assets/category/floor-cleaner.png';
     }

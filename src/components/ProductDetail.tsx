@@ -26,6 +26,7 @@ interface Product {
   blade_length?: string; 
   brand?: string;
   Fragrance?: string;
+  form?: string;
 }
 
 interface ProductDetailProps {
@@ -65,6 +66,7 @@ const productDetails = [
   ...(product.shape ? [{ label: 'Shape', value: product.shape }] : []),     
   ...(product.color ? [{ label: 'Color', value: product.color }] : []),     
   ...(product.Fragrance ? [{ label: 'Fragrance', value: product.Fragrance }] : []),
+  ...(product.form ? [{ label: 'Form', value: product.form }] : []),
   ...(product.rod_material ? [{ label: 'Rod Material', value: product.rod_material }] : []), 
   ...(product.rod_length ? [{ label: 'Rod Length', value: product.rod_length }] : []),       
   ...(product.blade_length ? [{ label: 'Blade Length', value: product.blade_length }] : []), 

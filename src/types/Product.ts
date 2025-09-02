@@ -22,4 +22,5 @@ export interface Product {
   color?: string;
   brand?: string;
   Fragrance?: string;
+  form?: string;
 }

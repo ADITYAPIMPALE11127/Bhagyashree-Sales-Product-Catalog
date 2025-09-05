@@ -43,8 +43,8 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
   };
 
   return (
-    <div className="mb-8">
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+    <div className="mb-6 lg:mb-8">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 lg:gap-6">
         {categories.map((category) => (
           <button
             key={category}
@@ -52,7 +52,7 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
             className="group flex flex-col items-center transition-all duration-200 hover:scale-105"
           >
             {/* Category Image - Larger Size */}
-            <div className="w-24 h-24 mb-3 overflow-hidden flex items-center justify-center bg-gray-50 rounded-lg">
+            <div className="w-16 h-16 lg:w-24 lg:h-24 mb-2 lg:mb-3 overflow-hidden flex items-center justify-center bg-gray-50 rounded-lg">
               <img
                 src={getCategoryImage(category)}
                 alt={category}
@@ -72,7 +72,7 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
             </div>
             
             {/* Category Title */}
-            <h3 className="text-sm font-semibold text-gray-800 text-center group-hover:text-blue-600 transition-colors">
+            <h3 className="text-xs lg:text-sm font-semibold text-gray-800 text-center group-hover:text-blue-600 transition-colors">
               {category}
             </h3>
           </button>

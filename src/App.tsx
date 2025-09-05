@@ -16,14 +16,40 @@ function App() {
   price: p.price ?? 'N/A',
 }));
 
+  const [globalSearchTerm, setGlobalSearchTerm] = useState('');
   return (
     <div className="min-h-screen bg-[#10707A]">
-      <Header />
+      <Header searchTerm={globalSearchTerm} onSearchChange={setGlobalSearchTerm} />
 <div className="bg-[#E8F9FF] min-h-screen">
       <Routes>
-        <Route path="/" element={<HomePage products={products} />} />
+        <Route path="/" element={<HomePage products={products} globalSearchTerm={globalSearchTerm} setGlobalSearchTerm={setGlobalSearchTerm} />} />
         <Route path="/product/:id" element={<ProductDetail products={products} />} />
       </Routes>
+
+      {/* About Us Section */}
+      <div id="about" className="bg-white py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
+            About Bhagyashree Sales
+          </h2>
+          <div className="prose prose-lg mx-auto text-gray-600">
+            <p className="mb-4">
+              Welcome to Bhagyashree Sales, your trusted partner for high-quality cleaning and household products. 
+              Located in Akurdi, Pune, Maharashtra, we have been serving customers with premium cleaning solutions 
+              that make your home and workplace spotless and hygienic.
+            </p>
+            <p className="mb-4">
+              Our extensive product range includes floor cleaners, dish cleaners, naphthalene balls, floor wipers, 
+              and cotton mops from renowned brands like Tiger. We are committed to providing products that deliver 
+              exceptional cleaning performance while being safe for your family and environment.
+            </p>
+            <p>
+              At Bhagyashree Sales, customer satisfaction is our top priority. We ensure competitive pricing, 
+              reliable quality, and prompt service to meet all your cleaning needs.
+            </p>
+          </div>
+        </div>
+      </div>
 
       <div id="footer">
         <Footer />
@@ -33,66 +59,75 @@ function App() {
   );
 }
 
-function HomePage({ products }: { products: Product[] }) {
-  const [searchTerm, setSearchTerm] = useState('');
+function HomePage({ products, globalSearchTerm, setGlobalSearchTerm }: { 
+  products: Product[]; 
+  globalSearchTerm: string; 
+  setGlobalSearchTerm: (term: string) => void; 
+}) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [localSearchTerm, setLocalSearchTerm] = useState('');
 
   const categories = useMemo(() => {
     return Array.from(new Set(products.map(product => product.category)));
   }, [products]);
 
+  // Use global search term when no category is selected, local search when category is selected
+  const effectiveSearchTerm = selectedCategory ? localSearchTerm : globalSearchTerm;
 const filteredProducts = useMemo(() => {
   return products.filter(product => {
     const name = product.name || '';  // fallback to empty string if undefined
-    const matchesSearch = name.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = name.toLowerCase().includes(effectiveSearchTerm.toLowerCase());
     const matchesCategory = selectedCategory === null || product.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
-}, [products, searchTerm, selectedCategory]);
+}, [products, effectiveSearchTerm, selectedCategory]);
 
 
   const handleCategorySelect = (category: string) => {
     setSelectedCategory(category);
-    setSearchTerm(''); // Clear search when selecting category
+    setLocalSearchTerm(''); // Clear local search when selecting category
+    setGlobalSearchTerm(''); // Clear global search when selecting category
   };
 
   const handleBackToHome = () => {
     setSelectedCategory(null);
-    setSearchTerm('');
+    setLocalSearchTerm('');
+    setGlobalSearchTerm('');
   };
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 lg:py-8">
       {/* Category View or Product View */}
       {selectedCategory ? (
         // Category-specific view
         <div>
           {/* Back Button */}
-          <div className="mb-6">
+          <div className="mb-4 lg:mb-6">
             <button
               onClick={handleBackToHome}
-              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors font-medium"
+              className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors font-medium text-sm lg:text-base"
             >
-              <ArrowLeft className="w-4 h-4 mr-2" />
+              <ArrowLeft className="w-4 h-4 lg:w-5 lg:h-5 mr-2" />
               Back to Categories
             </button>
           </div>
 
           {/* Category Header */}
-          <div className="mb-6">
-            <h1 className="text-3xl font-bold text-gray-900 mb-2">{selectedCategory}</h1>
-            <p className="text-gray-600">
+          <div className="mb-4 lg:mb-6">
+            <h1 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">{selectedCategory}</h1>
+            <p className="text-sm lg:text-base text-gray-600">
               {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''} available
             </p>
           </div>
 
           {/* Search Bar for Category */}
-          <div className="mb-6">
+          <div className="mb-4 lg:mb-6">
             <input
               type="text"
               placeholder={`Search in ${selectedCategory}...`}
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+              value={localSearchTerm}
+              onChange={(e) => setLocalSearchTerm(e.target.value)}
+              className="w-full max-w-md px-3 lg:px-4 py-2 lg:py-3 text-sm lg:text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
 
@@ -101,18 +136,18 @@ const filteredProducts = useMemo(() => {
             <ProductList products={filteredProducts} />
           ) : (
             <div className="text-center py-12">
-              <Package className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No products found</h3>
-              <p className="text-gray-600">
-                {searchTerm 
-                  ? `No products found matching "${searchTerm}" in ${selectedCategory}`
+              <Package className="w-12 h-12 lg:w-16 lg:h-16 text-gray-300 mx-auto mb-4" />
+              <h3 className="text-base lg:text-lg font-medium text-gray-900 mb-2">No products found</h3>
+              <p className="text-sm lg:text-base text-gray-600">
+                {localSearchTerm 
+                  ? `No products found matching "${localSearchTerm}" in ${selectedCategory}`
                   : `No products available in ${selectedCategory}`
                 }
               </p>
-              {searchTerm && (
+              {localSearchTerm && (
                 <button
-                  onClick={() => setSearchTerm('')}
-                  className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-600 bg-blue-100 hover:bg-blue-200 transition-colors"
+                  onClick={() => setLocalSearchTerm('')}
+                  className="mt-4 inline-flex items-center px-3 lg:px-4 py-2 border border-transparent text-xs lg:text-sm font-medium rounded-md text-blue-600 bg-blue-100 hover:bg-blue-200 transition-colors"
                 >
                   Clear search
                 </button>
@@ -129,21 +164,10 @@ const filteredProducts = useMemo(() => {
             onCategorySelect={handleCategorySelect}
           />
 
-          {/* Search Bar for All Products */}
-          <div className="mb-6">
-            <input
-              type="text"
-              placeholder="Search all products..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full max-w-md px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-            />
-          </div>
-
           {/* All Products */}
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">All Products</h2>
-            <p className="text-gray-600 mb-6">
+          <div className="mb-4 lg:mb-6">
+            <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-2 lg:mb-4">All Products</h2>
+            <p className="text-sm lg:text-base text-gray-600 mb-4 lg:mb-6">
               {filteredProducts.length} product{filteredProducts.length !== 1 ? 's' : ''} available
             </p>
           </div>
@@ -152,18 +176,18 @@ const filteredProducts = useMemo(() => {
             <ProductList products={filteredProducts} />
           ) : (
             <div className="text-center py-12">
-              <Package className="w-16 h-16 text-gray-300 mx-auto mb-4" />
-              <h3 className="text-lg font-medium text-gray-900 mb-2">No products found</h3>
-              <p className="text-gray-600">
-                {searchTerm 
-                  ? `No products found matching "${searchTerm}"`
+              <Package className="w-12 h-12 lg:w-16 lg:h-16 text-gray-300 mx-auto mb-4" />
+              <h3 className="text-base lg:text-lg font-medium text-gray-900 mb-2">No products found</h3>
+              <p className="text-sm lg:text-base text-gray-600">
+                {globalSearchTerm 
+                  ? `No products found matching "${globalSearchTerm}"`
                   : "No products available"
                 }
               </p>
-              {searchTerm && (
+              {globalSearchTerm && (
                 <button
-                  onClick={() => setSearchTerm('')}
-                  className="mt-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-blue-600 bg-blue-100 hover:bg-blue-200 transition-colors"
+                  onClick={() => setGlobalSearchTerm('')}
+                  className="mt-4 inline-flex items-center px-3 lg:px-4 py-2 border border-transparent text-xs lg:text-sm font-medium rounded-md text-blue-600 bg-blue-100 hover:bg-blue-200 transition-colors"
                 >
                   Clear search
                 </button>

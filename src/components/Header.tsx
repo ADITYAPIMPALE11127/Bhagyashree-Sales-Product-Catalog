@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Search, Phone, Info } from 'lucide-react';
+import AboutUsModal from './AboutUsModal';
 
 interface HeaderProps {
   searchTerm?: string;
@@ -9,6 +10,7 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ searchTerm = '', onSearchChange }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isAboutModalOpen, setIsAboutModalOpen] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -16,6 +18,24 @@ const Header: React.FC<HeaderProps> = ({ searchTerm = '', onSearchChange }) => {
 
   const closeMobileMenu = () => {
     setIsMobileMenuOpen(false);
+  };
+
+  const openAboutModal = () => {
+    setIsAboutModalOpen(true);
+    closeMobileMenu();
+  };
+
+  const closeAboutModal = () => {
+    setIsAboutModalOpen(false);
+  };
+
+  const handleContactClick = () => {
+    closeMobileMenu();
+    // Scroll to footer
+    const footer = document.getElementById('footer');
+    if (footer) {
+      footer.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -45,13 +65,13 @@ const Header: React.FC<HeaderProps> = ({ searchTerm = '', onSearchChange }) => {
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-6">
-              <a
-                href="#about"
+              <button
+                onClick={openAboutModal}
                 className="text-blue-600 font-medium text-lg hover:underline transition-colors"
                 style={{ fontFamily: "'Playfair Display', serif" }}
               >
                 About Us
-              </a>
+              </button>
               <a
                 href="#footer"
                 className="text-blue-600 font-medium text-lg hover:underline transition-colors"
@@ -120,23 +140,21 @@ const Header: React.FC<HeaderProps> = ({ searchTerm = '', onSearchChange }) => {
 
               {/* Menu Items */}
               <nav className="flex-1 px-4 py-6 space-y-4">
-                <a
-                  href="#about"
-                  onClick={closeMobileMenu}
+                <button
+                  onClick={openAboutModal}
                   className="flex items-center gap-3 px-3 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                 >
                   <Info className="w-5 h-5" />
                   <span className="font-medium">About Us</span>
-                </a>
+                </button>
                 
-                <a
-                  href="#footer"
-                  onClick={closeMobileMenu}
+                <button
+                  onClick={handleContactClick}
                   className="flex items-center gap-3 px-3 py-3 text-gray-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
                 >
                   <Phone className="w-5 h-5" />
                   <span className="font-medium">Contact Us</span>
-                </a>
+                </button>
               </nav>
 
               {/* Menu Footer */}
@@ -150,6 +168,9 @@ const Header: React.FC<HeaderProps> = ({ searchTerm = '', onSearchChange }) => {
           </div>
         </div>
       )}
+
+      {/* About Us Modal */}
+      <AboutUsModal isOpen={isAboutModalOpen} onClose={closeAboutModal} />
     </>
   );
 };

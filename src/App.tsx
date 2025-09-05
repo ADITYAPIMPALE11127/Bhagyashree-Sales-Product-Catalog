@@ -26,31 +26,6 @@ function App() {
         <Route path="/product/:id" element={<ProductDetail products={products} />} />
       </Routes>
 
-      {/* About Us Section */}
-      <div id="about" className="bg-white py-12 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-6" style={{ fontFamily: "'Playfair Display', serif" }}>
-            About Bhagyashree Sales
-          </h2>
-          <div className="prose prose-lg mx-auto text-gray-600">
-            <p className="mb-4">
-              Welcome to Bhagyashree Sales, your trusted partner for high-quality cleaning and household products. 
-              Located in Akurdi, Pune, Maharashtra, we have been serving customers with premium cleaning solutions 
-              that make your home and workplace spotless and hygienic.
-            </p>
-            <p className="mb-4">
-              Our extensive product range includes floor cleaners, dish cleaners, naphthalene balls, floor wipers, 
-              and cotton mops from renowned brands like Tiger. We are committed to providing products that deliver 
-              exceptional cleaning performance while being safe for your family and environment.
-            </p>
-            <p>
-              At Bhagyashree Sales, customer satisfaction is our top priority. We ensure competitive pricing, 
-              reliable quality, and prompt service to meet all your cleaning needs.
-            </p>
-          </div>
-        </div>
-      </div>
-
       <div id="footer">
         <Footer />
       </div>

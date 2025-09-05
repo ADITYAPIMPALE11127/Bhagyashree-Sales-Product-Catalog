@@ -23,4 +23,9 @@ export interface Product {
   brand?: string;
   Fragrance?: string;
   form?: string;
+  box_contains?: string;
+  candle_size?: string;
+  type?: string;
+  diameter?: string,
+  material?: string,
 }

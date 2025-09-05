@@ -479,5 +479,43 @@
     "features":["3 action Lemon Cleaner","No Food Residue","Tough on Oil Stair, Soft on Hand"],
     "images":["/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455004633-500x500.webp",
   "/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455012188-500x500.webp"]
+  },
+  {
+    "id":62,
+    "name":"100Gm Tiger Chamkeri Utensil Shining Powder",
+    "available":true,
+    "brand":"Tiger",
+    "Packaging_Type":"Pouch",
+    "MRP":"30",
+    "category":"Dish Cleaner",
+    "price":"30",
+    "Packaging_Size":"100gm",
+    "Selling rate":"25",
+    "form":"Powder",
+    "Fragrance":"Lemon",
+    "Usage/Application":"Utensils Cleaning",
+    "images":["/assets/products/dish-cleaner/tiger-chamkeri-powder-100gm-1697454763327-1000x1000.webp",
+    "/assets/products/dish-cleaner/100gm-tiger-chamkeri-utensil-shining-powder-500x500.webp"],
+    "color":"Red",
+    "features":["3 in 1 action ","Safe On hand, Remove Stains, Scratch Less Uniform Clean","Wet The Article","Scour it well with cloth","wash it well","wipe it to dry"]
+  },
+  {
+    "id":63,
+    "available":true,
+    "brand":"Tiger",
+    "category":"Dish Cleaner",
+    "color":"Red",
+    "form":"Powder",
+    "shelf_life":"24 Months",
+    "MRP":"50",
+    "price":"50",
+    "Selling rate":"45",
+    "name":"200Gm Tiger Chamkeri Utensils Washing Powder",
+    "Packaging_Type":"Pouch",
+    "Usage/Application":"Utensils Cleaning",
+    "Packaging_Size":"200gm",
+    "images":["/assets/products/dish-cleaner/200gm-tiger-chamkeri-utensils-washing-powder-500x500.webp","/assets/products/dish-cleaner/tiger-chamkeri-powder-200gm-1697455017540-500x500.webp"],
+    "features":["3 in 1 action ","Safe On hand, Remove Stains, Scratch Less Uniform Clean","Scour it well with cloth","wash it well","wipe it to dry"]
+
   }
 ]

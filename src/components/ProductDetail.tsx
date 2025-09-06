@@ -14,6 +14,7 @@ interface Product {
   Packaging_Size?: string;
   pack_type?: string;
   Packaging_Type?: string;
+  pack_contain?: string;         // ✅ added
   shape?: string;       
   color?: string;       
   'Usage/Application'?: string;
@@ -27,6 +28,7 @@ interface Product {
   brand?: string;
   Fragrance?: string;
   form?: string;
+  grade_standard?: string;       // ✅ added
 }
 
 interface ProductDetailProps {
@@ -58,23 +60,25 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ products }) => {
     );
   }
 
-const productDetails = [
-  { label: 'Category', value: product.category },
-  ...(product.Packaging_Size ? [{ label: 'Packaging Size', value: product.Packaging_Size }] : []),
-  ...(product.pack_type ? [{ label: 'Pack Type', value: product.pack_type }] : []),
-  ...(product.Packaging_Type ? [{ label: 'Packaging Type', value: product.Packaging_Type }] : []),
-  ...(product.shape ? [{ label: 'Shape', value: product.shape }] : []),     
-  ...(product.color ? [{ label: 'Color', value: product.color }] : []),     
-  ...(product.Fragrance ? [{ label: 'Fragrance', value: product.Fragrance }] : []),
-  ...(product.form ? [{ label: 'Form', value: product.form }] : []),
-  ...(product.rod_material ? [{ label: 'Rod Material', value: product.rod_material }] : []), 
-  ...(product.rod_length ? [{ label: 'Rod Length', value: product.rod_length }] : []),       
-  ...(product.blade_length ? [{ label: 'Blade Length', value: product.blade_length }] : []), 
-  ...(product['Usage/Application'] ? [{ label: 'Usage/Application', value: product['Usage/Application'] }] : []),
-  ...(product.shelf_life ? [{ label: 'Shelf Life', value: product.shelf_life }] : []),
-  ...(product.product_brand ? [{ label: 'Brand', value: product.product_brand }] : []),
-  ...(product.brand ? [{ label: 'Brand', value: product.brand }] : []),
-];
+  const productDetails = [
+    { label: 'Category', value: product.category },
+    ...(product.Packaging_Size ? [{ label: 'Packaging Size', value: product.Packaging_Size }] : []),
+    ...(product.pack_type ? [{ label: 'Pack Type', value: product.pack_type }] : []),
+    ...(product.Packaging_Type ? [{ label: 'Packaging Type', value: product.Packaging_Type }] : []),
+    ...(product.pack_contain ? [{ label: 'Pack Contain', value: product.pack_contain }] : []), // ✅ new
+    ...(product.shape ? [{ label: 'Shape', value: product.shape }] : []),     
+    ...(product.color ? [{ label: 'Color', value: product.color }] : []),     
+    ...(product.Fragrance ? [{ label: 'Fragrance', value: product.Fragrance }] : []),
+    ...(product.form ? [{ label: 'Form', value: product.form }] : []),
+    ...(product.rod_material ? [{ label: 'Rod Material', value: product.rod_material }] : []), 
+    ...(product.rod_length ? [{ label: 'Rod Length', value: product.rod_length }] : []),       
+    ...(product.blade_length ? [{ label: 'Blade Length', value: product.blade_length }] : []), 
+    ...(product['Usage/Application'] ? [{ label: 'Usage/Application', value: product['Usage/Application'] }] : []),
+    ...(product.grade_standard ? [{ label: 'Grade Standard', value: product.grade_standard }] : []), // ✅ new
+    ...(product.shelf_life ? [{ label: 'Shelf Life', value: product.shelf_life }] : []),
+    ...(product.product_brand ? [{ label: 'Brand', value: product.product_brand }] : []),
+    ...(product.brand ? [{ label: 'Brand', value: product.brand }] : []),
+  ];
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -109,10 +113,11 @@ const productDetails = [
                   <button
                     key={index}
                     onMouseEnter={() => setSelectedImageIndex(index)}
-                    className={`flex-1 h-20 rounded-lg overflow-hidden border-2 transition-all ${selectedImageIndex === index
-                      ? 'border-blue-500 ring-2 ring-blue-200'
-                      : 'border-gray-200 hover:border-gray-300'
-                      }`}
+                    className={`flex-1 h-20 rounded-lg overflow-hidden border-2 transition-all ${
+                      selectedImageIndex === index
+                        ? 'border-blue-500 ring-2 ring-blue-200'
+                        : 'border-gray-200 hover:border-gray-300'
+                    }`}
                   >
                     <img
                       src={image}
@@ -137,7 +142,6 @@ const productDetails = [
               </span>
 
               {/* Pricing Section */}
-
               <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg border border-blue-200">
                 <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
                   <div className="flex items-center gap-2">
@@ -152,6 +156,7 @@ const productDetails = [
                   )}
                 </div>
               </div>
+
               <br />
               {/* Product Specifications Table */}
               <div className="bg-white rounded-xl border border-gray-200 shadow-sm overflow-hidden">
@@ -163,8 +168,14 @@ const productDetails = [
                 </div>
                 <div className="p-6">
                   {productDetails.map((detail, index) => (
-                    <div key={index} className={`flex justify-between items-center py-4 ${index !== productDetails.length - 1 ? 'border-b border-gray-100' : ''
-                      } hover:bg-gray-50 transition-colors duration-150 rounded-lg px-3 -mx-3`}>
+                    <div
+                      key={index}
+                      className={`flex justify-between items-center py-4 ${
+                        index !== productDetails.length - 1
+                          ? 'border-b border-gray-100'
+                          : ''
+                      } hover:bg-gray-50 transition-colors duration-150 rounded-lg px-3 -mx-3`}
+                    >
                       <span className="font-semibold text-gray-700 text-sm uppercase tracking-wide">
                         {detail.label}
                       </span>
@@ -176,6 +187,7 @@ const productDetails = [
                 </div>
               </div>
             </div>
+
             {/* Features */}
             {product.features && product.features.length > 0 && (
               <div className="bg-white rounded-xl border border-green-200 shadow-sm overflow-hidden">
@@ -188,9 +200,14 @@ const productDetails = [
                 <div className="p-6">
                   <ul className="space-y-3">
                     {product.features.map((feature, index) => (
-                      <li key={index} className="flex items-start gap-3 p-2 hover:bg-green-50 rounded-lg transition-colors duration-150">
+                      <li
+                        key={index}
+                        className="flex items-start gap-3 p-2 hover:bg-green-50 rounded-lg transition-colors duration-150"
+                      >
                         <span className="w-2 h-2 bg-green-500 rounded-full mt-2.5 flex-shrink-0"></span>
-                        <span className="text-gray-700 font-medium leading-relaxed">{feature}</span>
+                        <span className="text-gray-700 font-medium leading-relaxed">
+                          {feature}
+                        </span>
                       </li>
                     ))}
                   </ul>

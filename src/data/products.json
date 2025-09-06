@@ -312,7 +312,7 @@
       "/assets/products/floor-cleaner/tiger-black-disinfectant-phenyl-450ml-1697454718953-500x500.webp"
     ],
     "MRP": 85,
-    "Packaging_Size":"450ML",
+    "Packaging_Size": "450ML",
     "shelf_life": "12 Months",
     "features": [
       "4 in 1 Action",
@@ -336,14 +336,13 @@
     "Usage/Application": "Cupboard",
     "product_brand": "Tiger",
     "Selling rate": "85",
-    "shape":"Round",
-    "pack_type":"Packet",
-    "color":"White",
-    "available":true,
-
+    "shape": "Round",
+    "pack_type": "Packet",
+    "color": "White",
+    "available": true,
     "features": [
       "Guards against insects and moths",
-       "Tolites, Sink, Book Shelfs"
+      "Tolites, Sink, Book Shelfs"
     ]
   },
   {
@@ -356,166 +355,231 @@
     ],
     "price": "₹35/Pack",
     "MRP": "35",
-    "pack_type":"Packet",
-    "color":"White",
-    "available":true,
-    "shape":"Round",
+    "pack_type": "Packet",
+    "color": "White",
+    "available": true,
+    "shape": "Round",
     "Packaging_Size": "50gm",
     "Usage/Application": "Toilet",
     "product_brand": "Tiger",
     "Selling rate": "30",
     "features": [
       "Guards against insects and moths",
-     "Tolites, Sink, Book Shelfs"
+      "Tolites, Sink, Book Shelfs"
     ]
-  },{
+  },
+  {
     "id": 33,
-    "name":"100Gm Tiger Brand Naphthalene Balls",
+    "name": "100Gm Tiger Brand Naphthalene Balls",
     "category": "Naphthalene Balls",
-    "images": ["/assets/products/naphthalene-balls/100gm-tiger-brand-naphthalene-balls-500x500.jpg",
-    "/assets/products/naphthalene-balls/100gm-tiger-brand-naphthalene-balls-500x500 (1).webp"],
+    "images": [
+      "/assets/products/naphthalene-balls/100gm-tiger-brand-naphthalene-balls-500x500.jpg",
+      "/assets/products/naphthalene-balls/100gm-tiger-brand-naphthalene-balls-500x500 (1).webp"
+    ],
     "price": "₹65/Pack",
     "MRP": "65",
     "Packaging_Size": "100gm",
     "Usage/Application": "Toilet",
     "product_brand": "Tiger",
     "Selling rate": "55",
-    "shape":"Round",
-    "brand":"Tiger",
-    "pack_type":"Packet",
-    "color":"White",
-    "available":true,
-    "shelf_life":"24 Months",
-    "features": ["Guards against insects and moths","Tolites, Sink, Book Shelfs"]
-
+    "shape": "Round",
+    "brand": "Tiger",
+    "pack_type": "Packet",
+    "color": "White",
+    "available": true,
+    "shelf_life": "24 Months",
+    "features": [
+      "Guards against insects and moths",
+      "Tolites, Sink, Book Shelfs"
+    ]
   },
   {
-"id":34,
-"name":"500gm Tiger Brand Naphthalene Balls",
-"category":"Naphthalene Balls",
-"images":["/assets/products/naphthalene-balls/500gm-tiger-brand-naphthalene-balls-125x125.webp"],
-"available":true,
- "price":"220",
- "MRP":220,
- "Packaging_Size":"500gm",
- "Usage/Application":"Cupboard",
- "product_brand":"Tiger",
- "Selling rate":180,
- "features":["Guards against insects and moths","Tolites, Sink, Book Shelfs"],
- "pack_type":"Packet",
- "color":"White",
- "shelf_life":"24 Months",
- "shape":"Round",
-  "brand":"Tiger"
-
+    "id": 34,
+    "name": "500gm Tiger Brand Naphthalene Balls",
+    "category": "Naphthalene Balls",
+    "images": [
+      "/assets/products/naphthalene-balls/500gm-tiger-brand-naphthalene-balls-125x125.webp"
+    ],
+    "available": true,
+    "price": "220",
+    "MRP": 220,
+    "Packaging_Size": "500gm",
+    "Usage/Application": "Cupboard",
+    "product_brand": "Tiger",
+    "Selling rate": 180,
+    "features": [
+      "Guards against insects and moths",
+      "Tolites, Sink, Book Shelfs"
+    ],
+    "pack_type": "Packet",
+    "color": "White",
+    "shelf_life": "24 Months",
+    "shape": "Round",
+    "brand": "Tiger"
   },
   {
-   "id":51,
-   "name":"Marigold Plastic Floor Wiper",
-   "category":"Floor Wiper",
-   "images":["/assets/products/floor-wiper/marigold-plastic-floor-wiper-125x125.webp",
-   "/assets/products/floor-wiper/wiper-1697791532366-500x500.webp",
-   "/assets/products/floor-wiper/wiper-1697791539976-125x125.webp"],
-   "price": "₹122",
-   "MRP": 122,
-   "rod_material":"Plastic",
-   "available":true,
-   "features":["Marigold Plastic Floor Wiper"],
-   "rod_length":"3 Feet",
-   "blade_length":"12 inch",
-   "color":"Blue",
-   "Selling rate":"100",
-   "product_brand":"Marigold"
+    "id": 51,
+    "name": "Marigold Plastic Floor Wiper",
+    "category": "Floor Wiper",
+    "images": [
+      "/assets/products/floor-wiper/marigold-plastic-floor-wiper-125x125.webp",
+      "/assets/products/floor-wiper/wiper-1697791532366-500x500.webp",
+      "/assets/products/floor-wiper/wiper-1697791539976-125x125.webp"
+    ],
+    "price": "₹122",
+    "MRP": 122,
+    "rod_material": "Plastic",
+    "available": true,
+    "features": [
+      "Marigold Plastic Floor Wiper"
+    ],
+    "rod_length": "3 Feet",
+    "blade_length": "12 inch",
+    "color": "Blue",
+    "Selling rate": "100",
+    "product_brand": "Marigold"
   },
   {
     "id": 52,
-    "name":"Tower Plastic Floor Wiper",
-    "category":"Floor Wiper",
-    "images":["/assets/products/floor-wiper/tower-plastic-floor-wiper-1000x1000.webp",
-    "/assets/products/floor-wiper/tower-plastic-floor-wiper-125x125.webp","/assets/products/floor-wiper/floor-wiper-1697791570107-125x125.webp"],
-    "available":true,
-    "price":"₹81",
-    "MRP":"81",
-    "blade_length":"10 inch",
-    "rod_length":"15 inch",
-    "color":"Black",
-    "rod_material":"Plastic",
-    "features":["Tower Plastic Floor Wiper"],
-    "Selling rate":"60",
-    "product_brand":"Tower"
+    "name": "Tower Plastic Floor Wiper",
+    "category": "Floor Wiper",
+    "images": [
+      "/assets/products/floor-wiper/tower-plastic-floor-wiper-1000x1000.webp",
+      "/assets/products/floor-wiper/tower-plastic-floor-wiper-125x125.webp",
+      "/assets/products/floor-wiper/floor-wiper-1697791570107-125x125.webp"
+    ],
+    "available": true,
+    "price": "₹81",
+    "MRP": "81",
+    "blade_length": "10 inch",
+    "rod_length": "15 inch",
+    "color": "Black",
+    "rod_material": "Plastic",
+    "features": [
+      "Tower Plastic Floor Wiper"
+    ],
+    "Selling rate": "60",
+    "product_brand": "Tower"
   },
   {
     "id": 53,
-    "name":"Volva Floor Wiper",
-    "category":"Floor Wiper",
-    "images":["/assets/products/floor-wiper/floor-wiper-1697791547981-1000x1000.webp"],
-    "available":true,
-    "price":"₹111",
-    "MRP":"111",
-    "rod_length":"10 inch",
-    "color":"Red",
-    "rod_material":"Plastic",
-    "features":["Volva Floor Wiper"],
-    "Selling rate":"80",
-    "product_brand":"Volva",
-    "blade_length":"9 inch"
+    "name": "Volva Floor Wiper",
+    "category": "Floor Wiper",
+    "images": [
+      "/assets/products/floor-wiper/floor-wiper-1697791547981-1000x1000.webp"
+    ],
+    "available": true,
+    "price": "₹111",
+    "MRP": "111",
+    "rod_length": "10 inch",
+    "color": "Red",
+    "rod_material": "Plastic",
+    "features": [
+      "Volva Floor Wiper"
+    ],
+    "Selling rate": "80",
+    "product_brand": "Volva",
+    "blade_length": "9 inch"
   },
   {
-    "id":61,
-    "name":"500ml Tiger Habit Dish Cleaner",
-    "available":true,
-    "form":"Liquid",
-    "brand":"Tiger",
-    "Fragrance":"Lemon",
-    "category":"Dish Cleaner",
-    "color":"Yellow",
-    "shelf_life":"24 Months",
-    "Usage/Application":"Dish Cleaning",
-    "price":"110",
-    "Packaging_Size":"500ML",
-    "MRP":"110",
-    "Selling rate":"100",
-    "Packaging_Type":"Bottle",
-    "features":["3 action Lemon Cleaner","No Food Residue","Tough on Oil Stair, Soft on Hand"],
-    "images":["/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455004633-500x500.webp",
-  "/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455012188-500x500.webp"]
+    "id": 61,
+    "name": "500ml Tiger Habit Dish Cleaner",
+    "available": true,
+    "form": "Liquid",
+    "brand": "Tiger",
+    "Fragrance": "Lemon",
+    "category": "Dish Cleaner",
+    "color": "Yellow",
+    "shelf_life": "24 Months",
+    "Usage/Application": "Dish Cleaning",
+    "price": "110",
+    "Packaging_Size": "500ML",
+    "MRP": "110",
+    "Selling rate": "100",
+    "Packaging_Type": "Bottle",
+    "features": [
+      "3 action Lemon Cleaner",
+      "No Food Residue",
+      "Tough on Oil Stair, Soft on Hand"
+    ],
+    "images": [
+      "/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455004633-500x500.webp",
+      "/assets/products/dish-cleaner/tiger-habit-dish-cleaner-500ml-1697455012188-500x500.webp"
+    ]
   },
   {
-    "id":62,
-    "name":"100Gm Tiger Chamkeri Utensil Shining Powder",
-    "available":true,
-    "brand":"Tiger",
-    "Packaging_Type":"Pouch",
-    "MRP":"30",
-    "category":"Dish Cleaner",
-    "price":"30",
-    "Packaging_Size":"100gm",
-    "Selling rate":"25",
-    "form":"Powder",
-    "Fragrance":"Lemon",
-    "Usage/Application":"Utensils Cleaning",
-    "images":["/assets/products/dish-cleaner/tiger-chamkeri-powder-100gm-1697454763327-1000x1000.webp",
-    "/assets/products/dish-cleaner/100gm-tiger-chamkeri-utensil-shining-powder-500x500.webp"],
-    "color":"Red",
-    "features":["3 in 1 action ","Safe On hand, Remove Stains, Scratch Less Uniform Clean","Wet The Article","Scour it well with cloth","wash it well","wipe it to dry"]
+    "id": 62,
+    "name": "100Gm Tiger Chamkeri Utensil Shining Powder",
+    "available": true,
+    "brand": "Tiger",
+    "Packaging_Type": "Pouch",
+    "MRP": "30",
+    "category": "Dish Cleaner",
+    "price": "30",
+    "Packaging_Size": "100gm",
+    "Selling rate": "25",
+    "form": "Powder",
+    "Fragrance": "Lemon",
+    "Usage/Application": "Utensils Cleaning",
+    "images": [
+      "/assets/products/dish-cleaner/tiger-chamkeri-powder-100gm-1697454763327-1000x1000.webp",
+      "/assets/products/dish-cleaner/100gm-tiger-chamkeri-utensil-shining-powder-500x500.webp"
+    ],
+    "color": "Red",
+    "features": [
+      "3 in 1 action ",
+      "Safe On hand, Remove Stains, Scratch Less Uniform Clean",
+      "Wet The Article",
+      "Scour it well with cloth",
+      "wash it well",
+      "wipe it to dry"
+    ]
   },
   {
-    "id":63,
+    "id": 63,
+    "available": true,
+    "brand": "Tiger",
+    "category": "Dish Cleaner",
+    "color": "Red",
+    "form": "Powder",
+    "shelf_life": "24 Months",
+    "MRP": "50",
+    "price": "50",
+    "Selling rate": "45",
+    "name": "200Gm Tiger Chamkeri Utensils Washing Powder",
+    "Packaging_Type": "Pouch",
+    "Usage/Application": "Utensils Cleaning",
+    "Packaging_Size": "200gm",
+    "images": [
+      "/assets/products/dish-cleaner/200gm-tiger-chamkeri-utensils-washing-powder-500x500.webp",
+      "/assets/products/dish-cleaner/tiger-chamkeri-powder-200gm-1697455017540-500x500.webp"
+    ],
+    "features": [
+      "3 in 1 action ",
+      "Safe On hand, Remove Stains, Scratch Less Uniform Clean",
+      "Scour it well with cloth",
+      "wash it well",
+      "wipe it to dry"
+    ]
+  },
+  {
+    "id": 101,
+    "name": "20Gm Sarvodaya Boric Acid Powder",
+    "category": "Other Essentials",
+    "form": "Powder",
     "available":true,
-    "brand":"Tiger",
-    "category":"Dish Cleaner",
-    "color":"Red",
-    "form":"Powder",
-    "shelf_life":"24 Months",
-    "MRP":"50",
-    "price":"50",
-    "Selling rate":"45",
-    "name":"200Gm Tiger Chamkeri Utensils Washing Powder",
-    "Packaging_Type":"Pouch",
-    "Usage/Application":"Utensils Cleaning",
-    "Packaging_Size":"200gm",
-    "images":["/assets/products/dish-cleaner/200gm-tiger-chamkeri-utensils-washing-powder-500x500.webp","/assets/products/dish-cleaner/tiger-chamkeri-powder-200gm-1697455017540-500x500.webp"],
-    "features":["3 in 1 action ","Safe On hand, Remove Stains, Scratch Less Uniform Clean","Scour it well with cloth","wash it well","wipe it to dry"]
-
+    "brand":"Sarvodaya",
+    "Packaging_Size":"20gm",
+    "pack_contain":"12 piece",
+    "MRP":"300",
+    "price":"300",
+    "Selling rate":"290",
+    "shelf_life":"3 Years",
+    "Usage/Application":"Carrom board and Dancing floor",
+    "features":["ISI-10116","kangaro PUNCH 500"],
+    "grade_standard":"Analytical Grade",
+    "Packaging_Type":"Box",
+    "images":["/assets/products/boric-acid-powder/20gm-sarvodaya-boric-acid-powder-500x500 (1).webp",
+  "/assets/products/boric-acid-powder/20gm-sarvodaya-boric-acid-powder-500x500.webp"]
   }
 ]

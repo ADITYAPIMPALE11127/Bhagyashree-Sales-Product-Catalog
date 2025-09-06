@@ -1,5 +1,5 @@
 import React from 'react';
-import { Package, Droplets, Sparkles, Utensils } from 'lucide-react';
+import { Package, Droplets, Sparkles, Utensils, Box } from 'lucide-react';
 
 interface CategoryGridProps {
   categories: string[];
@@ -20,6 +20,8 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
         return <Sparkles className="w-12 h-12 text-purple-600" />;
       case 'dish cleaner':
         return <Utensils className="w-12 h-12 text-green-600" />;
+      case 'other essentials':
+        return <Box className="w-12 h-12 text-orange-600" />;
       default:
         return <Package className="w-12 h-12 text-gray-600" />;
     }
@@ -37,6 +39,8 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
         return '/assets/category/cotton-mop.png';
       case 'dish cleaner':
         return '/assets/category/dish-wash-cleaner.png';
+      case 'other essentials':
+        return '/assets/category/others-essentials.png';
       default:
         return '/assets/category/floor-cleaner.png';
     }
@@ -65,7 +69,9 @@ const CategoryGrid: React.FC<CategoryGridProps> = ({ categories, onCategorySelec
                   if (iconContainer) {
                     iconContainer.innerHTML = '';
                     const iconElement = getCategoryIcon(category);
-                    iconContainer.appendChild(iconElement.props.children ? document.createElement('div') : document.createElement('div'));
+                    const wrapper = document.createElement('div');
+                    wrapper.innerHTML = (iconElement as any).props?.children || '';
+                    iconContainer.appendChild(wrapper);
                   }
                 }}
               />

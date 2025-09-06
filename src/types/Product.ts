@@ -23,9 +23,9 @@ export interface Product {
   brand?: string;
   Fragrance?: string;
   form?: string;
-  box_contains?: string;
-  candle_size?: string;
-  type?: string;
-  diameter?: string,
-  material?: string,
+  box_contains?: string;   // ✅ New field
+  candle_size?: string;    // ✅ New field
+  type?: string;           // ✅ New field
+  diameter?: string;       // ✅ New field
+  material?: string;       // ✅ New field
 }

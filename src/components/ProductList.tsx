@@ -2,17 +2,7 @@
 
 import React from 'react';
 import ProductCard from './ProductCard';
-
-interface Product {
-  id: number;
-  name: string;
-  category: string;
-  images: string[];
-  available: boolean;
-  price: string;
-  quantity: string;
-  MRP: string;
-}
+import { Product } from '../types/Product';  // ✅ Use shared Product interface
 
 interface ProductListProps {
   products: Product[];
